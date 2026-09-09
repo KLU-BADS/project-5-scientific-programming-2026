@@ -1,0 +1,16 @@
+name = "Project5"
+uuid = "a87ea0c4-effc-4c39-b324-814a8a71756c"
+authors = [
+  # use one line per author to ease conflict resolution
+  "Your Name <your.name@example.com>",
+]
+version = "0.1.0"
+
+# The docs and test environments are part of this workspace, so they resolve
+# against the same manifest and find this package without being told where it
+# is. Their own dependencies are in docs/Project.toml and test/Project.toml.
+[workspace]
+projects = ["docs", "test"]
+
+[compat]
+julia = "1.12"

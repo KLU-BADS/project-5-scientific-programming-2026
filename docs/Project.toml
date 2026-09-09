@@ -1,0 +1,10 @@
+[deps]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+DocumenterPlantUML = "ee5590a8-faa9-47ff-a03b-b69c10a769fd"
+PlantUML = "69ad847d-c018-4c53-a279-bc41134dba09"
+Project5 = "a87ea0c4-effc-4c39-b324-814a8a71756c"
+
+[compat]
+Documenter = "1"
+DocumenterPlantUML = "=0.1.0"
+PlantUML = "=0.1.1"
