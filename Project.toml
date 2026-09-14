@@ -3,6 +3,7 @@ uuid = "a87ea0c4-effc-4c39-b324-814a8a71756c"
 authors = [
   # use one line per author to ease conflict resolution
   "Duc <tienduc.nguyen@stud.klu.org>",
+  "Srujana Darapuneni<srujana.darapuneni@stud.klu.org>",
 ]
 version = "0.1.0"
 
