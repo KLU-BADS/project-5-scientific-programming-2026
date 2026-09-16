@@ -9,7 +9,10 @@
 ## Overview
 
 <!-- DESCRIBE PROJECT PURPOSE BELOW -->
-A minimal Julia package helping you to start your project. 
+Title: Demand–Production Gap Analysis and Capacity Optimization in Manufacturing
+
+How can manufacturing demand and production data be analysed to identify shortages, excess production, and machine bottlenecks, and how can production be reallocated to reduce these mismatches and Storing in the warehouse
+
 <!-- DESCRIBE PROJECT PURPOSE ABOVE  -->
 
 ## Getting started
@@ -77,3 +80,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 <!-- DO NOT EDIT BELOW -->
 MIT. See [LICENSE](LICENSE).
 <!-- DO NOT EDIT ABOVE -->
+
