@@ -25,8 +25,32 @@ The `hello()` function prints "Hello World".
 
 ```plantuml
 @startuml
-left to right direction
-(*) --> "print"
-"print" --> (*)
+title Production Optimisation System - Activity Diagram
+start
+
+:Provide Input Data;
+
+:Data Cleaning & Validation;
+
+:Demand & Inventory Analysis;
+
+:Machine Eligibility\n(Prediction / Scoring);
+
+:Optimization & Scheduling;
+
+:Generate Production Plan;
+
+:Performance Evaluation;
+
+if (Adjust Plan Needed?) then (Yes)
+    :Replan / Adjust;
+    :Update Inputs or Constraints;
+    :Rerun Optimization;
+else (No)
+    :Implement & Monitor;
+    stop
+endif
+
 @enduml
+
 ```
