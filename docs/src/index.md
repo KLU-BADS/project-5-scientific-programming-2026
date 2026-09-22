@@ -12,13 +12,12 @@ The project follows an end-to-end workflow:
 1. Data Loading
 2. Data Cleaning and Validation
 3. Demand and Inventory Analysis
-4. Machine Eligibility
-5. Processing-Time Estimation and Scoring
-6. Optimization and Scheduling
-7. Production Plan Generation
-8. Warehouse and Performance Evaluation
-9. Implementation and Monitoring
-10. Replanning
+4. Processing-Time Estimation and Scoring
+5. Optimization and Scheduling
+6. Production Plan Generation
+7. Warehouse and Performance Evaluation
+8. Implementation and Monitoring
+9. Replanning
 
 The main objective is to transform manufacturing data into a feasible and
 optimized production plan.
