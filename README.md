@@ -1,4 +1,4 @@
-# Project5.jl
+# Demand–Production Gap Analysis and Capacity Optimization in Manufacturing
 
 <!-- DO NOT EDIT BELOW -->
 [![Tests](../../actions/workflows/tests.yml/badge.svg)](../../actions/workflows/tests.yml)
