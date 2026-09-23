@@ -36,22 +36,34 @@ DataModule.jl ingests and validates the data, passing it to both DemandModule.jl
 
 ```plantuml
 @startuml
-left to right direction
-(*) --> "Load & Clean Data\n(DataModule.jl)"
-"Load & Clean Data\n(DataModule.jl)" --> "Demand Analysis\n(DemandModule.jl)"
-"Load & Clean Data\n(DataModule.jl)" --> "Score & Filter Machines\n(ScoringModule.jl)"
-"Demand Analysis\n(DemandModule.jl)" --> "MILP Scheduling\n(OptimizationModule.jl)"
-"Score & Filter Machines\n(ScoringModule.jl)" --> "MILP Scheduling\n(OptimizationModule.jl)"
-"MILP Scheduling\n(OptimizationModule.jl)" --> "Output & Evaluate\n(EvaluationModule.jl)"
+title Production Optimisation System - Activity Diagram
+start
 
-"Output & Evaluate\n(EvaluationModule.jl)" --> if "Targets Achieved?" then
-  --> [Yes] "Implement & Monitor"
-  --> (*)
-else
-  --> [No] "Replan / Adjust"
-  "Replan / Adjust" --> "MILP Scheduling\n(OptimizationModule.jl)"
+:Provide Input Data;
+
+:Data Cleaning & Validation;
+
+:Demand & Inventory Analysis;
+
+:Machine Eligibility\n(Prediction / Scoring);
+
+:Optimization & Scheduling;
+
+:Generate Production Plan;
+
+:Performance Evaluation;
+
+if (Adjust Plan Needed?) then (Yes)
+    :Replan / Adjust;
+    :Update Inputs or Constraints;
+    :Rerun Optimization;
+else (No)
+    :Implement & Monitor;
+    stop
 endif
+
 @enduml
+
 ```
 
 ## Data and Output
