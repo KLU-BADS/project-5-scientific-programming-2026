@@ -1,0 +1,991 @@
+﻿Sr No,Order ID,Order Date,Due date,Product ID,Order Quantity,Priority,Customer Type,Order Status,Operation Id,Operation Name,Sequence,Machine Id,Machine Type,Eligible,Standard Cycle Time Min Unit,Setup time min,Machine Capacity Units Shift,machine_Efficiency,Machine status,Available Hours Shift,Current Stock,Safety Stock,Reserved Stock,Breakdown Propability,Breakdown Duration Min
+1,O0031,02-Oct-2026,10-Oct-2026,P004,360,1,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,4%,75
+2,O0031,02-Oct-2026,10-Oct-2026,P004,360,1,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,10%,120
+3,O0031,02-Oct-2026,10-Oct-2026,P004,360,1,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,4%,120
+4,O0031,02-Oct-2026,10-Oct-2026,P004,360,1,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,10%,120
+5,O0031,02-Oct-2026,10-Oct-2026,P004,360,1,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,4%,120
+6,O0031,02-Oct-2026,10-Oct-2026,P004,360,1,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,4%,120
+7,O0021,05-Oct-2026,02-Nov-2026,P002,240,1,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,4%,120
+8,O0021,05-Oct-2026,02-Nov-2026,P002,240,1,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Maintenance,6,85,140,30,14%,120
+9,O0021,05-Oct-2026,02-Nov-2026,P002,240,1,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,4%,120
+10,O0021,05-Oct-2026,02-Nov-2026,P002,240,1,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,10%,120
+11,O0021,05-Oct-2026,02-Nov-2026,P002,240,1,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,4%,120
+12,O0021,05-Oct-2026,02-Nov-2026,P002,240,1,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,4%,120
+13,O0030,08-Oct-2026,15-Oct-2026,P001,300,1,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,2%,90
+14,O0030,08-Oct-2026,15-Oct-2026,P001,300,1,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,2%,90
+15,O0030,08-Oct-2026,15-Oct-2026,P001,300,1,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,2%,90
+16,O0030,08-Oct-2026,15-Oct-2026,P001,300,1,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,2%,90
+17,O0030,08-Oct-2026,15-Oct-2026,P001,300,1,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,2%,90
+18,O0030,08-Oct-2026,15-Oct-2026,P001,300,1,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,2%,90
+19,O0035,11-Oct-2026,09-Nov-2026,P002,120,2,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,3%,108
+20,O0035,11-Oct-2026,09-Nov-2026,P002,120,2,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,8%,108
+21,O0035,11-Oct-2026,09-Nov-2026,P002,120,2,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,3%,108
+22,O0035,11-Oct-2026,09-Nov-2026,P002,120,2,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,8%,108
+23,O0035,11-Oct-2026,09-Nov-2026,P002,120,2,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,3%,108
+24,O0035,11-Oct-2026,09-Nov-2026,P002,120,2,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,3%,108
+25,O0045,14-Oct-2026,27-Oct-2026,P003,480,1,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.9,25,501,0.94,Available,8,160,200,70,3%,108
+26,O0045,14-Oct-2026,27-Oct-2026,P003,480,1,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.98,25,445,0.91,Available,8,160,200,70,3%,108
+27,O0045,14-Oct-2026,27-Oct-2026,P003,480,1,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,1.04,27,304,0.88,Reduced,6,160,200,70,8%,108
+28,O0045,14-Oct-2026,27-Oct-2026,P003,480,1,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.67,35,273,0.95,Available,8,160,200,70,3%,108
+29,O0045,14-Oct-2026,27-Oct-2026,P003,480,1,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.82,35,242,0.92,Available,8,160,200,70,3%,108
+30,O0045,14-Oct-2026,27-Oct-2026,P003,480,1,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.45,15,1034,0.97,Available,8,160,200,70,3%,108
+31,O0059,17-Oct-2026,21-Oct-2026,P002,150,1,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,72
+32,O0059,17-Oct-2026,21-Oct-2026,P002,150,1,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,5%,72
+33,O0059,17-Oct-2026,21-Oct-2026,P002,150,1,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,72
+34,O0059,17-Oct-2026,21-Oct-2026,P002,150,1,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,5%,72
+35,O0059,17-Oct-2026,21-Oct-2026,P002,150,1,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,72
+36,O0059,17-Oct-2026,21-Oct-2026,P002,150,1,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,72
+37,O0023,20-Oct-2026,21-Nov-2026,P005,180,2,Standard,Open,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+38,O0023,20-Oct-2026,21-Nov-2026,P005,180,2,Standard,Open,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+39,O0023,20-Oct-2026,21-Nov-2026,P005,180,2,Standard,Open,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+40,O0023,20-Oct-2026,21-Nov-2026,P005,180,2,Standard,Open,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+41,O0023,20-Oct-2026,21-Nov-2026,P005,180,2,Standard,Open,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+42,O0023,20-Oct-2026,21-Nov-2026,P005,180,2,Standard,Open,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+43,O0026,23-Oct-2026,01-Nov-2026,P004,300,1,Key Account,Open,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,4%,120
+44,O0026,23-Oct-2026,01-Nov-2026,P004,300,1,Key Account,Open,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,10%,120
+45,O0026,23-Oct-2026,01-Nov-2026,P004,300,1,Key Account,Open,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,4%,120
+46,O0026,23-Oct-2026,01-Nov-2026,P004,300,1,Key Account,Open,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,10%,120
+47,O0026,23-Oct-2026,01-Nov-2026,P004,300,1,Key Account,Open,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,4%,120
+48,O0026,23-Oct-2026,01-Nov-2026,P004,300,1,Key Account,Open,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,4%,120
+49,O0042,26-Oct-2026,24-Nov-2026,P002,120,2,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,90
+50,O0042,26-Oct-2026,24-Nov-2026,P002,120,2,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,6%,90
+51,O0042,26-Oct-2026,24-Nov-2026,P002,120,2,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,90
+52,O0042,26-Oct-2026,24-Nov-2026,P002,120,2,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,6%,90
+53,O0042,26-Oct-2026,24-Nov-2026,P002,120,2,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,90
+54,O0042,26-Oct-2026,24-Nov-2026,P002,120,2,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,90
+55,O0056,29-Oct-2026,06-Nov-2026,P003,420,1,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.9,25,501,0.94,Available,8,160,200,70,4%,120
+56,O0056,29-Oct-2026,06-Nov-2026,P003,420,1,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.98,25,445,0.91,Available,8,160,200,70,4%,120
+57,O0056,29-Oct-2026,06-Nov-2026,P003,420,1,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,1.04,27,304,0.88,Reduced,6,160,200,70,10%,120
+58,O0056,29-Oct-2026,06-Nov-2026,P003,420,1,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.67,35,273,0.95,Available,8,160,200,70,4%,120
+59,O0056,29-Oct-2026,06-Nov-2026,P003,420,1,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.82,35,242,0.92,Available,8,160,200,70,4%,120
+60,O0056,29-Oct-2026,06-Nov-2026,P003,420,1,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.45,15,1034,0.97,Available,8,160,200,70,4%,120
+61,O0038,01-Nov-2026,09-Nov-2026,P004,180,2,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,2%,72
+62,O0038,01-Nov-2026,09-Nov-2026,P004,180,2,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,5%,72
+63,O0038,01-Nov-2026,09-Nov-2026,P004,180,2,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,2%,72
+64,O0038,01-Nov-2026,09-Nov-2026,P004,180,2,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,5%,72
+65,O0038,01-Nov-2026,09-Nov-2026,P004,180,2,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,2%,72
+66,O0038,01-Nov-2026,09-Nov-2026,P004,180,2,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,2%,72
+67,O0029,04-Nov-2026,01-Dec-2026,P002,600,3,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,72
+68,O0029,04-Nov-2026,01-Dec-2026,P002,600,3,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,5%,72
+69,O0029,04-Nov-2026,01-Dec-2026,P002,600,3,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,72
+70,O0029,04-Nov-2026,01-Dec-2026,P002,600,3,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,5%,72
+71,O0029,04-Nov-2026,01-Dec-2026,P002,600,3,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,72
+72,O0029,04-Nov-2026,01-Dec-2026,P002,600,3,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,72
+73,O0048,07-Nov-2026,20-Nov-2026,P002,120,2,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,72
+74,O0048,07-Nov-2026,20-Nov-2026,P002,120,2,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,5%,72
+75,O0048,07-Nov-2026,20-Nov-2026,P002,120,2,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,72
+76,O0048,07-Nov-2026,20-Nov-2026,P002,120,2,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,5%,72
+77,O0048,07-Nov-2026,20-Nov-2026,P002,120,2,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,72
+78,O0048,07-Nov-2026,20-Nov-2026,P002,120,2,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,72
+79,O0037,10-Nov-2026,28-Nov-2026,P005,600,2,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+80,O0037,10-Nov-2026,28-Nov-2026,P005,600,2,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+81,O0037,10-Nov-2026,28-Nov-2026,P005,600,2,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+82,O0037,10-Nov-2026,28-Nov-2026,P005,600,2,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+83,O0037,10-Nov-2026,28-Nov-2026,P005,600,2,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+84,O0037,10-Nov-2026,28-Nov-2026,P005,600,2,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+85,O0047,13-Nov-2026,18-Nov-2026,P005,200,2,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+86,O0047,13-Nov-2026,18-Nov-2026,P005,200,2,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+87,O0047,13-Nov-2026,18-Nov-2026,P005,200,2,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+88,O0047,13-Nov-2026,18-Nov-2026,P005,200,2,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+89,O0047,13-Nov-2026,18-Nov-2026,P005,200,2,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+90,O0047,13-Nov-2026,18-Nov-2026,P005,200,2,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+91,O0040,16-Nov-2026,19-Nov-2026,P002,360,2,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,72
+92,O0040,16-Nov-2026,19-Nov-2026,P002,360,2,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,5%,72
+93,O0040,16-Nov-2026,19-Nov-2026,P002,360,2,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,72
+94,O0040,16-Nov-2026,19-Nov-2026,P002,360,2,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,5%,72
+95,O0040,16-Nov-2026,19-Nov-2026,P002,360,2,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,72
+96,O0040,16-Nov-2026,19-Nov-2026,P002,360,2,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,72
+97,O0020,19-Nov-2026,20-Dec-2026,P002,300,3,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,72
+98,O0020,19-Nov-2026,20-Dec-2026,P002,300,3,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,5%,72
+99,O0020,19-Nov-2026,20-Dec-2026,P002,300,3,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,72
+100,O0020,19-Nov-2026,20-Dec-2026,P002,300,3,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,5%,72
+101,O0020,19-Nov-2026,20-Dec-2026,P002,300,3,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,72
+102,O0020,19-Nov-2026,20-Dec-2026,P002,300,3,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,72
+103,O0043,22-Nov-2026,02-Dec-2026,P002,480,3,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,90
+104,O0043,22-Nov-2026,02-Dec-2026,P002,480,3,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,6%,90
+105,O0043,22-Nov-2026,02-Dec-2026,P002,480,3,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,90
+106,O0043,22-Nov-2026,02-Dec-2026,P002,480,3,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,6%,90
+107,O0043,22-Nov-2026,02-Dec-2026,P002,480,3,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,90
+108,O0043,22-Nov-2026,02-Dec-2026,P002,480,3,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,90
+109,O0053,25-Nov-2026,21-Dec-2026,P004,120,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,4%,120
+110,O0053,25-Nov-2026,21-Dec-2026,P004,120,3,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,10%,120
+111,O0053,25-Nov-2026,21-Dec-2026,P004,120,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,4%,120
+112,O0053,25-Nov-2026,21-Dec-2026,P004,120,3,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,10%,120
+113,O0053,25-Nov-2026,21-Dec-2026,P004,120,3,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,4%,120
+114,O0053,25-Nov-2026,21-Dec-2026,P004,120,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,4%,120
+115,O0033,28-Nov-2026,03-Dec-2026,P005,480,3,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+116,O0033,28-Nov-2026,03-Dec-2026,P005,480,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+117,O0033,28-Nov-2026,03-Dec-2026,P005,480,3,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+118,O0033,28-Nov-2026,03-Dec-2026,P005,480,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+119,O0033,28-Nov-2026,03-Dec-2026,P005,480,3,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+120,O0033,28-Nov-2026,03-Dec-2026,P005,480,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+121,O0058,01-Dec-2026,08-Dec-2026,P002,180,3,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,3%,108
+122,O0058,01-Dec-2026,08-Dec-2026,P002,180,3,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,8%,108
+123,O0058,01-Dec-2026,08-Dec-2026,P002,180,3,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,3%,108
+124,O0058,01-Dec-2026,08-Dec-2026,P002,180,3,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,8%,108
+125,O0058,01-Dec-2026,08-Dec-2026,P002,180,3,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,3%,108
+126,O0058,01-Dec-2026,08-Dec-2026,P002,180,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,3%,108
+127,O0054,04-Dec-2026,04-Jan-2027,P003,180,4,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.9,25,501,0.94,Available,8,160,200,70,2%,72
+128,O0054,04-Dec-2026,04-Jan-2027,P003,180,4,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.98,25,445,0.91,Available,8,160,200,70,2%,72
+129,O0054,04-Dec-2026,04-Jan-2027,P003,180,4,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,1.04,27,304,0.88,Reduced,6,160,200,70,5%,72
+130,O0054,04-Dec-2026,04-Jan-2027,P003,180,4,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.67,35,273,0.95,Available,8,160,200,70,2%,72
+131,O0054,04-Dec-2026,04-Jan-2027,P003,180,4,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.82,35,242,0.92,Available,8,160,200,70,2%,72
+132,O0054,04-Dec-2026,04-Jan-2027,P003,180,4,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.45,15,1034,0.97,Available,8,160,200,70,2%,72
+133,O0050,07-Dec-2026,20-Dec-2026,P004,480,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,4%,120
+134,O0050,07-Dec-2026,20-Dec-2026,P004,480,3,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,10%,120
+135,O0050,07-Dec-2026,20-Dec-2026,P004,480,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,4%,120
+136,O0050,07-Dec-2026,20-Dec-2026,P004,480,3,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,10%,120
+137,O0050,07-Dec-2026,20-Dec-2026,P004,480,3,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,4%,120
+138,O0050,07-Dec-2026,20-Dec-2026,P004,480,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,4%,120
+139,O0044,10-Dec-2026,31-Dec-2026,P002,150,4,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,4%,120
+140,O0044,10-Dec-2026,31-Dec-2026,P002,150,4,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,10%,120
+141,O0044,10-Dec-2026,31-Dec-2026,P002,150,4,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,4%,120
+142,O0044,10-Dec-2026,31-Dec-2026,P002,150,4,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,10%,120
+143,O0044,10-Dec-2026,31-Dec-2026,P002,150,4,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,4%,120
+144,O0044,10-Dec-2026,31-Dec-2026,P002,150,4,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,4%,120
+145,O0036,13-Dec-2026,01-Jan-2027,P005,180,4,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+146,O0036,13-Dec-2026,01-Jan-2027,P005,180,4,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+147,O0036,13-Dec-2026,01-Jan-2027,P005,180,4,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+148,O0036,13-Dec-2026,01-Jan-2027,P005,180,4,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+149,O0036,13-Dec-2026,01-Jan-2027,P005,180,4,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+150,O0036,13-Dec-2026,01-Jan-2027,P005,180,4,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+151,O0009,16-Dec-2026,23-Dec-2026,P005,360,4,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+152,O0009,16-Dec-2026,23-Dec-2026,P005,360,4,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+153,O0009,16-Dec-2026,23-Dec-2026,P005,360,4,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+154,O0009,16-Dec-2026,23-Dec-2026,P005,360,4,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+155,O0009,16-Dec-2026,23-Dec-2026,P005,360,4,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+156,O0009,16-Dec-2026,23-Dec-2026,P005,360,4,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+157,O0016,19-Dec-2026,21-Jan-2027,P003,200,4,Standard,Open,OP10,Cutting,1,M01,Cutting,Yes,0.9,25,501,0.94,Available,8,160,200,70,4%,120
+158,O0016,19-Dec-2026,21-Jan-2027,P003,200,4,Standard,Open,OP10,Cutting,1,M02,Cutting,Yes,0.98,25,445,0.91,Available,8,160,200,70,4%,120
+159,O0016,19-Dec-2026,21-Jan-2027,P003,200,4,Standard,Open,OP10,Cutting,1,M08,Cutting,Yes,1.04,27,304,0.88,Reduced,6,160,200,70,10%,120
+160,O0016,19-Dec-2026,21-Jan-2027,P003,200,4,Standard,Open,OP20,Machining,2,M03,Machining,Yes,1.67,35,273,0.95,Available,8,160,200,70,4%,120
+161,O0016,19-Dec-2026,21-Jan-2027,P003,200,4,Standard,Open,OP20,Machining,2,M04,Machining,Yes,1.82,35,242,0.92,Available,8,160,200,70,4%,120
+162,O0016,19-Dec-2026,21-Jan-2027,P003,200,4,Standard,Open,OP30,Packing,3,M05,Packing,Yes,0.45,15,1034,0.97,Available,8,160,200,70,4%,120
+163,O0019,22-Dec-2026,29-Dec-2026,P005,240,4,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,2%,72
+164,O0019,22-Dec-2026,29-Dec-2026,P005,240,4,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,2%,72
+165,O0019,22-Dec-2026,29-Dec-2026,P005,240,4,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,2%,72
+166,O0019,22-Dec-2026,29-Dec-2026,P005,240,4,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,2%,72
+167,O0019,22-Dec-2026,29-Dec-2026,P005,240,4,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,5%,72
+168,O0019,22-Dec-2026,29-Dec-2026,P005,240,4,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,2%,72
+169,O0018,25-Dec-2026,24-Jan-2027,P005,480,4,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,2%,72
+170,O0018,25-Dec-2026,24-Jan-2027,P005,480,4,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,2%,72
+171,O0018,25-Dec-2026,24-Jan-2027,P005,480,4,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,2%,72
+172,O0018,25-Dec-2026,24-Jan-2027,P005,480,4,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,2%,72
+173,O0018,25-Dec-2026,24-Jan-2027,P005,480,4,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,5%,72
+174,O0018,25-Dec-2026,24-Jan-2027,P005,480,4,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,2%,72
+175,O0024,28-Dec-2026,07-Jan-2027,P005,420,4,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+176,O0024,28-Dec-2026,07-Jan-2027,P005,420,4,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+177,O0024,28-Dec-2026,07-Jan-2027,P005,420,4,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+178,O0024,28-Dec-2026,07-Jan-2027,P005,420,4,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+179,O0024,28-Dec-2026,07-Jan-2027,P005,420,4,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+180,O0024,28-Dec-2026,07-Jan-2027,P005,420,4,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+181,O0005,04-Oct-2026,12-Oct-2026,P001,360,1,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,3%,108
+182,O0005,04-Oct-2026,12-Oct-2026,P001,360,1,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,3%,108
+183,O0005,04-Oct-2026,12-Oct-2026,P001,360,1,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,3%,108
+184,O0005,04-Oct-2026,12-Oct-2026,P001,360,1,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,3%,108
+185,O0005,04-Oct-2026,12-Oct-2026,P001,360,1,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,3%,108
+186,O0005,04-Oct-2026,12-Oct-2026,P001,360,1,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,3%,108
+187,O0057,07-Oct-2026,14-Nov-2026,P001,480,2,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,2%,72
+188,O0057,07-Oct-2026,14-Nov-2026,P001,480,2,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,2%,72
+189,O0057,07-Oct-2026,14-Nov-2026,P001,480,2,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,2%,72
+190,O0057,07-Oct-2026,14-Nov-2026,P001,480,2,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,2%,72
+191,O0057,07-Oct-2026,14-Nov-2026,P001,480,2,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,2%,72
+192,O0057,07-Oct-2026,14-Nov-2026,P001,480,2,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,2%,72
+193,O0055,10-Oct-2026,22-Oct-2026,P002,600,1,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,4%,120
+194,O0055,10-Oct-2026,22-Oct-2026,P002,600,1,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,10%,120
+195,O0055,10-Oct-2026,22-Oct-2026,P002,600,1,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,4%,120
+196,O0055,10-Oct-2026,22-Oct-2026,P002,600,1,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,10%,120
+197,O0055,10-Oct-2026,22-Oct-2026,P002,600,1,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,4%,120
+198,O0055,10-Oct-2026,22-Oct-2026,P002,600,1,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,4%,120
+199,O0007,13-Oct-2026,04-Nov-2026,P005,200,1,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,2%,72
+200,O0007,13-Oct-2026,04-Nov-2026,P005,200,1,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,2%,72
+201,O0007,13-Oct-2026,04-Nov-2026,P005,200,1,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,2%,72
+202,O0007,13-Oct-2026,04-Nov-2026,P005,200,1,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,2%,72
+203,O0007,13-Oct-2026,04-Nov-2026,P005,200,1,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,5%,72
+204,O0007,13-Oct-2026,04-Nov-2026,P005,200,1,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,2%,72
+205,O0008,16-Oct-2026,25-Oct-2026,P004,120,1,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,2%,72
+206,O0008,16-Oct-2026,25-Oct-2026,P004,120,1,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,5%,72
+207,O0008,16-Oct-2026,25-Oct-2026,P004,120,1,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,2%,72
+208,O0008,16-Oct-2026,25-Oct-2026,P004,120,1,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,5%,72
+209,O0008,16-Oct-2026,25-Oct-2026,P004,120,1,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,2%,72
+210,O0008,16-Oct-2026,25-Oct-2026,P004,120,1,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,2%,72
+211,O0049,19-Oct-2026,23-Oct-2026,P003,180,1,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.9,25,501,0.94,Available,8,160,200,70,2%,90
+212,O0049,19-Oct-2026,23-Oct-2026,P003,180,1,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.98,25,445,0.91,Available,8,160,200,70,2%,90
+213,O0049,19-Oct-2026,23-Oct-2026,P003,180,1,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,1.04,27,304,0.88,Reduced,6,160,200,70,6%,90
+214,O0049,19-Oct-2026,23-Oct-2026,P003,180,1,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.67,35,273,0.95,Available,8,160,200,70,2%,90
+215,O0049,19-Oct-2026,23-Oct-2026,P003,180,1,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.82,35,242,0.92,Available,8,160,200,70,2%,90
+216,O0049,19-Oct-2026,23-Oct-2026,P003,180,1,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.45,15,1034,0.97,Available,8,160,200,70,2%,90
+217,O0004,22-Oct-2026,26-Nov-2026,P004,600,2,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,4%,120
+218,O0004,22-Oct-2026,26-Nov-2026,P004,600,2,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,10%,120
+219,O0004,22-Oct-2026,26-Nov-2026,P004,600,2,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,4%,120
+220,O0004,22-Oct-2026,26-Nov-2026,P004,600,2,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,10%,120
+221,O0004,22-Oct-2026,26-Nov-2026,P004,600,2,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,4%,120
+222,O0004,22-Oct-2026,26-Nov-2026,P004,600,2,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,4%,120
+223,O0017,25-Oct-2026,02-Nov-2026,P001,120,1,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,3%,108
+224,O0017,25-Oct-2026,02-Nov-2026,P001,120,1,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,3%,108
+225,O0017,25-Oct-2026,02-Nov-2026,P001,120,1,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,3%,108
+226,O0017,25-Oct-2026,02-Nov-2026,P001,120,1,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,3%,108
+227,O0017,25-Oct-2026,02-Nov-2026,P001,120,1,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,3%,108
+228,O0017,25-Oct-2026,02-Nov-2026,P001,120,1,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,3%,108
+229,O0014,28-Oct-2026,16-Nov-2026,P001,360,2,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,4%,120
+230,O0014,28-Oct-2026,16-Nov-2026,P001,360,2,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,4%,120
+231,O0014,28-Oct-2026,16-Nov-2026,P001,360,2,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,4%,120
+232,O0014,28-Oct-2026,16-Nov-2026,P001,360,2,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,4%,120
+233,O0014,28-Oct-2026,16-Nov-2026,P001,360,2,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,4%,120
+234,O0014,28-Oct-2026,16-Nov-2026,P001,360,2,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,4%,120
+235,O0012,31-Oct-2026,17-Nov-2026,P001,200,2,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,2%,72
+236,O0012,31-Oct-2026,17-Nov-2026,P001,200,2,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,2%,72
+237,O0012,31-Oct-2026,17-Nov-2026,P001,200,2,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,2%,72
+238,O0012,31-Oct-2026,17-Nov-2026,P001,200,2,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,2%,72
+239,O0012,31-Oct-2026,17-Nov-2026,P001,200,2,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,2%,72
+240,O0012,31-Oct-2026,17-Nov-2026,P001,200,2,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,2%,72
+241,O0011,03-Nov-2026,06-Nov-2026,P004,360,1,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,4%,120
+242,O0011,03-Nov-2026,06-Nov-2026,P004,360,1,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,10%,120
+243,O0011,03-Nov-2026,06-Nov-2026,P004,360,1,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,4%,120
+244,O0011,03-Nov-2026,06-Nov-2026,P004,360,1,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,10%,120
+245,O0011,03-Nov-2026,06-Nov-2026,P004,360,1,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,4%,120
+246,O0011,03-Nov-2026,06-Nov-2026,P004,360,1,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,4%,120
+247,O0028,06-Nov-2026,12-Dec-2026,P005,420,3,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+248,O0028,06-Nov-2026,12-Dec-2026,P005,420,3,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+249,O0028,06-Nov-2026,12-Dec-2026,P005,420,3,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+250,O0028,06-Nov-2026,12-Dec-2026,P005,420,3,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+251,O0028,06-Nov-2026,12-Dec-2026,P005,420,3,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+252,O0028,06-Nov-2026,12-Dec-2026,P005,420,3,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+253,O0010,09-Nov-2026,21-Nov-2026,P005,120,2,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,2%,72
+254,O0010,09-Nov-2026,21-Nov-2026,P005,120,2,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,2%,72
+255,O0010,09-Nov-2026,21-Nov-2026,P005,120,2,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,2%,72
+256,O0010,09-Nov-2026,21-Nov-2026,P005,120,2,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,2%,72
+257,O0010,09-Nov-2026,21-Nov-2026,P005,120,2,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,5%,72
+258,O0010,09-Nov-2026,21-Nov-2026,P005,120,2,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,2%,72
+259,O0039,12-Nov-2026,09-Dec-2026,P002,200,3,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,4%,120
+260,O0039,12-Nov-2026,09-Dec-2026,P002,200,3,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,10%,120
+261,O0039,12-Nov-2026,09-Dec-2026,P002,200,3,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,4%,120
+262,O0039,12-Nov-2026,09-Dec-2026,P002,200,3,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,10%,120
+263,O0039,12-Nov-2026,09-Dec-2026,P002,200,3,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,4%,120
+264,O0039,12-Nov-2026,09-Dec-2026,P002,200,3,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,4%,120
+265,O0013,15-Nov-2026,28-Nov-2026,P001,420,2,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,2%,72
+266,O0013,15-Nov-2026,28-Nov-2026,P001,420,2,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,2%,72
+267,O0013,15-Nov-2026,28-Nov-2026,P001,420,2,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,2%,72
+268,O0013,15-Nov-2026,28-Nov-2026,P001,420,2,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,2%,72
+269,O0013,15-Nov-2026,28-Nov-2026,P001,420,2,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,2%,72
+270,O0013,15-Nov-2026,28-Nov-2026,P001,420,2,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,2%,72
+271,O0015,18-Nov-2026,21-Nov-2026,P005,600,2,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,2%,72
+272,O0015,18-Nov-2026,21-Nov-2026,P005,600,2,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,2%,72
+273,O0015,18-Nov-2026,21-Nov-2026,P005,600,2,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,2%,72
+274,O0015,18-Nov-2026,21-Nov-2026,P005,600,2,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,2%,72
+275,O0015,18-Nov-2026,21-Nov-2026,P005,600,2,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,5%,72
+276,O0015,18-Nov-2026,21-Nov-2026,P005,600,2,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,2%,72
+277,O0027,21-Nov-2026,30-Dec-2026,P004,200,4,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,2%,72
+278,O0027,21-Nov-2026,30-Dec-2026,P004,200,4,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,5%,72
+279,O0027,21-Nov-2026,30-Dec-2026,P004,200,4,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,2%,72
+280,O0027,21-Nov-2026,30-Dec-2026,P004,200,4,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,5%,72
+281,O0027,21-Nov-2026,30-Dec-2026,P004,200,4,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,2%,72
+282,O0027,21-Nov-2026,30-Dec-2026,P004,200,4,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,2%,72
+283,O0060,24-Nov-2026,02-Dec-2026,P003,600,3,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.9,25,501,0.94,Available,8,160,200,70,2%,72
+284,O0060,24-Nov-2026,02-Dec-2026,P003,600,3,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.98,25,445,0.91,Available,8,160,200,70,2%,72
+285,O0060,24-Nov-2026,02-Dec-2026,P003,600,3,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,1.04,27,304,0.88,Reduced,6,160,200,70,5%,72
+286,O0060,24-Nov-2026,02-Dec-2026,P003,600,3,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.67,35,273,0.95,Available,8,160,200,70,2%,72
+287,O0060,24-Nov-2026,02-Dec-2026,P003,600,3,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.82,35,242,0.92,Available,8,160,200,70,2%,72
+288,O0060,24-Nov-2026,02-Dec-2026,P003,600,3,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.45,15,1034,0.97,Available,8,160,200,70,2%,72
+289,O0025,27-Nov-2026,21-Dec-2026,P001,150,3,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,2%,72
+290,O0025,27-Nov-2026,21-Dec-2026,P001,150,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,2%,72
+291,O0025,27-Nov-2026,21-Dec-2026,P001,150,3,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,2%,72
+292,O0025,27-Nov-2026,21-Dec-2026,P001,150,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,2%,72
+293,O0025,27-Nov-2026,21-Dec-2026,P001,150,3,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,2%,72
+294,O0025,27-Nov-2026,21-Dec-2026,P001,150,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,2%,72
+295,O0002,30-Nov-2026,07-Dec-2026,P005,200,3,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,2%,72
+296,O0002,30-Nov-2026,07-Dec-2026,P005,200,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,2%,72
+297,O0002,30-Nov-2026,07-Dec-2026,P005,200,3,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,2%,72
+298,O0002,30-Nov-2026,07-Dec-2026,P005,200,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,2%,72
+299,O0002,30-Nov-2026,07-Dec-2026,P005,200,3,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,5%,72
+300,O0002,30-Nov-2026,07-Dec-2026,P005,200,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,2%,72
+301,O0022,03-Dec-2026,10-Dec-2026,P005,240,3,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,2%,72
+302,O0022,03-Dec-2026,10-Dec-2026,P005,240,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,2%,72
+303,O0022,03-Dec-2026,10-Dec-2026,P005,240,3,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,2%,72
+304,O0022,03-Dec-2026,10-Dec-2026,P005,240,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,2%,72
+305,O0022,03-Dec-2026,10-Dec-2026,P005,240,3,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,5%,72
+306,O0022,03-Dec-2026,10-Dec-2026,P005,240,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,2%,72
+307,O0052,06-Dec-2026,09-Jan-2027,P001,420,4,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,4%,120
+308,O0052,06-Dec-2026,09-Jan-2027,P001,420,4,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,4%,120
+309,O0052,06-Dec-2026,09-Jan-2027,P001,420,4,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,4%,120
+310,O0052,06-Dec-2026,09-Jan-2027,P001,420,4,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,4%,120
+311,O0052,06-Dec-2026,09-Jan-2027,P001,420,4,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,4%,120
+312,O0052,06-Dec-2026,09-Jan-2027,P001,420,4,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,4%,120
+313,O0034,09-Dec-2026,21-Dec-2026,P005,200,3,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+314,O0034,09-Dec-2026,21-Dec-2026,P005,200,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+315,O0034,09-Dec-2026,21-Dec-2026,P005,200,3,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+316,O0034,09-Dec-2026,21-Dec-2026,P005,200,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+317,O0034,09-Dec-2026,21-Dec-2026,P005,200,3,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+318,O0034,09-Dec-2026,21-Dec-2026,P005,200,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+319,O0001,12-Dec-2026,08-Jan-2027,P003,180,4,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.9,25,501,0.94,Available,8,160,200,70,3%,108
+320,O0001,12-Dec-2026,08-Jan-2027,P003,180,4,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.98,25,445,0.91,Available,8,160,200,70,3%,108
+321,O0001,12-Dec-2026,08-Jan-2027,P003,180,4,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,1.04,27,304,0.88,Reduced,6,160,200,70,8%,108
+322,O0001,12-Dec-2026,08-Jan-2027,P003,180,4,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.67,35,273,0.95,Available,8,160,200,70,3%,108
+323,O0001,12-Dec-2026,08-Jan-2027,P003,180,4,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.82,35,242,0.92,Available,8,160,200,70,3%,108
+324,O0001,12-Dec-2026,08-Jan-2027,P003,180,4,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.45,15,1034,0.97,Available,8,160,200,70,3%,108
+325,O0051,15-Dec-2026,26-Dec-2026,P005,480,4,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+326,O0051,15-Dec-2026,26-Dec-2026,P005,480,4,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+327,O0051,15-Dec-2026,26-Dec-2026,P005,480,4,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+328,O0051,15-Dec-2026,26-Dec-2026,P005,480,4,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+329,O0051,15-Dec-2026,26-Dec-2026,P005,480,4,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+330,O0051,15-Dec-2026,26-Dec-2026,P005,480,4,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+331,O0003,18-Dec-2026,26-Dec-2026,P004,360,4,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,4%,120
+332,O0003,18-Dec-2026,26-Dec-2026,P004,360,4,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,10%,120
+333,O0003,18-Dec-2026,26-Dec-2026,P004,360,4,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,4%,120
+334,O0003,18-Dec-2026,26-Dec-2026,P004,360,4,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,10%,120
+335,O0003,18-Dec-2026,26-Dec-2026,P004,360,4,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,4%,120
+336,O0003,18-Dec-2026,26-Dec-2026,P004,360,4,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,4%,120
+337,O0032,21-Dec-2026,17-Jan-2027,P004,240,4,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,2%,72
+338,O0032,21-Dec-2026,17-Jan-2027,P004,240,4,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,5%,72
+339,O0032,21-Dec-2026,17-Jan-2027,P004,240,4,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,2%,72
+340,O0032,21-Dec-2026,17-Jan-2027,P004,240,4,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,5%,72
+341,O0032,21-Dec-2026,17-Jan-2027,P004,240,4,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,2%,72
+342,O0032,21-Dec-2026,17-Jan-2027,P004,240,4,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,2%,72
+343,O0041,24-Dec-2026,31-Dec-2026,P005,150,4,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+344,O0041,24-Dec-2026,31-Dec-2026,P005,150,4,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+345,O0041,24-Dec-2026,31-Dec-2026,P005,150,4,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+346,O0041,24-Dec-2026,31-Dec-2026,P005,150,4,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+347,O0041,24-Dec-2026,31-Dec-2026,P005,150,4,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+348,O0041,24-Dec-2026,31-Dec-2026,P005,150,4,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+349,O0046,27-Dec-2026,24-Jan-2027,P001,150,4,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,4%,120
+350,O0046,27-Dec-2026,24-Jan-2027,P001,150,4,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,4%,120
+351,O0046,27-Dec-2026,24-Jan-2027,P001,150,4,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,4%,120
+352,O0046,27-Dec-2026,24-Jan-2027,P001,150,4,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,4%,120
+353,O0046,27-Dec-2026,24-Jan-2027,P001,150,4,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,4%,120
+354,O0046,27-Dec-2026,24-Jan-2027,P001,150,4,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,4%,120
+355,O0006,03-Oct-2026,15-Oct-2026,P004,150,1,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,3%,108
+356,O0006,03-Oct-2026,15-Oct-2026,P004,150,1,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,8%,108
+357,O0006,03-Oct-2026,15-Oct-2026,P004,150,1,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,3%,108
+358,O0006,03-Oct-2026,15-Oct-2026,P004,150,1,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,8%,108
+359,O0006,03-Oct-2026,15-Oct-2026,P004,150,1,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,3%,108
+360,O0006,03-Oct-2026,15-Oct-2026,P004,150,1,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,3%,108
+361,O0031-2,09-Oct-2026,05-Nov-2026,P004,360,1,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,4%,120
+362,O0031-2,09-Oct-2026,05-Nov-2026,P004,360,1,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,10%,120
+363,O0031-2,09-Oct-2026,05-Nov-2026,P004,360,1,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,4%,120
+364,O0031-2,09-Oct-2026,05-Nov-2026,P004,360,1,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,10%,120
+365,O0031-2,09-Oct-2026,05-Nov-2026,P004,360,1,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,4%,120
+366,O0031-2,09-Oct-2026,05-Nov-2026,P004,360,1,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,4%,120
+367,O0021-2,12-Oct-2026,22-Oct-2026,P002,240,1,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,4%,120
+368,O0021-2,12-Oct-2026,22-Oct-2026,P002,240,1,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Maintenance,6,85,140,30,14%,120
+369,O0021-2,12-Oct-2026,22-Oct-2026,P002,240,1,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,4%,120
+370,O0021-2,12-Oct-2026,22-Oct-2026,P002,240,1,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,10%,120
+371,O0021-2,12-Oct-2026,22-Oct-2026,P002,240,1,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,4%,120
+372,O0021-2,12-Oct-2026,22-Oct-2026,P002,240,1,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,4%,120
+373,O0030-2,15-Oct-2026,03-Nov-2026,P001,300,1,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,2%,90
+374,O0030-2,15-Oct-2026,03-Nov-2026,P001,300,1,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,2%,90
+375,O0030-2,15-Oct-2026,03-Nov-2026,P001,300,1,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,2%,90
+376,O0030-2,15-Oct-2026,03-Nov-2026,P001,300,1,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,2%,90
+377,O0030-2,15-Oct-2026,03-Nov-2026,P001,300,1,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,2%,90
+378,O0030-2,15-Oct-2026,03-Nov-2026,P001,300,1,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,2%,90
+379,O0035-2,18-Oct-2026,04-Nov-2026,P002,120,1,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,3%,108
+380,O0035-2,18-Oct-2026,04-Nov-2026,P002,120,1,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,8%,108
+381,O0035-2,18-Oct-2026,04-Nov-2026,P002,120,1,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,3%,108
+382,O0035-2,18-Oct-2026,04-Nov-2026,P002,120,1,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,8%,108
+383,O0035-2,18-Oct-2026,04-Nov-2026,P002,120,1,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,3%,108
+384,O0035-2,18-Oct-2026,04-Nov-2026,P002,120,1,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,3%,108
+385,O0045-2,21-Oct-2026,26-Oct-2026,P003,480,1,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.9,25,501,0.94,Available,8,160,200,70,3%,108
+386,O0045-2,21-Oct-2026,26-Oct-2026,P003,480,1,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.98,25,445,0.91,Available,8,160,200,70,3%,108
+387,O0045-2,21-Oct-2026,26-Oct-2026,P003,480,1,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,1.04,27,304,0.88,Reduced,6,160,200,70,8%,108
+388,O0045-2,21-Oct-2026,26-Oct-2026,P003,480,1,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.67,35,273,0.95,Available,8,160,200,70,3%,108
+389,O0045-2,21-Oct-2026,26-Oct-2026,P003,480,1,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.82,35,242,0.92,Available,8,160,200,70,3%,108
+390,O0045-2,21-Oct-2026,26-Oct-2026,P003,480,1,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.45,15,1034,0.97,Available,8,160,200,70,3%,108
+391,O0059-2,24-Oct-2026,02-Dec-2026,P002,150,3,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,72
+392,O0059-2,24-Oct-2026,02-Dec-2026,P002,150,3,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,5%,72
+393,O0059-2,24-Oct-2026,02-Dec-2026,P002,150,3,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,72
+394,O0059-2,24-Oct-2026,02-Dec-2026,P002,150,3,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,5%,72
+395,O0059-2,24-Oct-2026,02-Dec-2026,P002,150,3,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,72
+396,O0059-2,24-Oct-2026,02-Dec-2026,P002,150,3,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,72
+397,O0023-2,27-Oct-2026,08-Nov-2026,P005,180,1,Standard,Open,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+398,O0023-2,27-Oct-2026,08-Nov-2026,P005,180,1,Standard,Open,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+399,O0023-2,27-Oct-2026,08-Nov-2026,P005,180,1,Standard,Open,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+400,O0023-2,27-Oct-2026,08-Nov-2026,P005,180,1,Standard,Open,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+401,O0023-2,27-Oct-2026,08-Nov-2026,P005,180,1,Standard,Open,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+402,O0023-2,27-Oct-2026,08-Nov-2026,P005,180,1,Standard,Open,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+403,O0026-2,30-Oct-2026,19-Nov-2026,P004,300,2,Key Account,Open,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,4%,120
+404,O0026-2,30-Oct-2026,19-Nov-2026,P004,300,2,Key Account,Open,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,10%,120
+405,O0026-2,30-Oct-2026,19-Nov-2026,P004,300,2,Key Account,Open,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,4%,120
+406,O0026-2,30-Oct-2026,19-Nov-2026,P004,300,2,Key Account,Open,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,10%,120
+407,O0026-2,30-Oct-2026,19-Nov-2026,P004,300,2,Key Account,Open,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,4%,120
+408,O0026-2,30-Oct-2026,19-Nov-2026,P004,300,2,Key Account,Open,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,4%,120
+409,O0042-2,02-Nov-2026,18-Nov-2026,P002,120,2,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,90
+410,O0042-2,02-Nov-2026,18-Nov-2026,P002,120,2,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,6%,90
+411,O0042-2,02-Nov-2026,18-Nov-2026,P002,120,2,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,90
+412,O0042-2,02-Nov-2026,18-Nov-2026,P002,120,2,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,6%,90
+413,O0042-2,02-Nov-2026,18-Nov-2026,P002,120,2,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,90
+414,O0042-2,02-Nov-2026,18-Nov-2026,P002,120,2,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,90
+415,O0056-2,05-Nov-2026,10-Nov-2026,P003,420,2,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.9,25,501,0.94,Available,8,160,200,70,4%,120
+416,O0056-2,05-Nov-2026,10-Nov-2026,P003,420,2,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.98,25,445,0.91,Available,8,160,200,70,4%,120
+417,O0056-2,05-Nov-2026,10-Nov-2026,P003,420,2,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,1.04,27,304,0.88,Reduced,6,160,200,70,10%,120
+418,O0056-2,05-Nov-2026,10-Nov-2026,P003,420,2,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.67,35,273,0.95,Available,8,160,200,70,4%,120
+419,O0056-2,05-Nov-2026,10-Nov-2026,P003,420,2,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.82,35,242,0.92,Available,8,160,200,70,4%,120
+420,O0056-2,05-Nov-2026,10-Nov-2026,P003,420,2,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.45,15,1034,0.97,Available,8,160,200,70,4%,120
+421,O0038-2,08-Nov-2026,09-Dec-2026,P004,180,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,2%,72
+422,O0038-2,08-Nov-2026,09-Dec-2026,P004,180,3,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,5%,72
+423,O0038-2,08-Nov-2026,09-Dec-2026,P004,180,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,2%,72
+424,O0038-2,08-Nov-2026,09-Dec-2026,P004,180,3,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,5%,72
+425,O0038-2,08-Nov-2026,09-Dec-2026,P004,180,3,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,2%,72
+426,O0038-2,08-Nov-2026,09-Dec-2026,P004,180,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,2%,72
+427,O0029-2,11-Nov-2026,22-Nov-2026,P002,600,2,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,72
+428,O0029-2,11-Nov-2026,22-Nov-2026,P002,600,2,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,5%,72
+429,O0029-2,11-Nov-2026,22-Nov-2026,P002,600,2,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,72
+430,O0029-2,11-Nov-2026,22-Nov-2026,P002,600,2,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,5%,72
+431,O0029-2,11-Nov-2026,22-Nov-2026,P002,600,2,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,72
+432,O0029-2,11-Nov-2026,22-Nov-2026,P002,600,2,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,72
+433,O0048-2,14-Nov-2026,13-Dec-2026,P002,120,3,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,72
+434,O0048-2,14-Nov-2026,13-Dec-2026,P002,120,3,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,5%,72
+435,O0048-2,14-Nov-2026,13-Dec-2026,P002,120,3,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,72
+436,O0048-2,14-Nov-2026,13-Dec-2026,P002,120,3,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,5%,72
+437,O0048-2,14-Nov-2026,13-Dec-2026,P002,120,3,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,72
+438,O0048-2,14-Nov-2026,13-Dec-2026,P002,120,3,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,72
+439,O0037-2,17-Nov-2026,24-Nov-2026,P005,600,2,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+440,O0037-2,17-Nov-2026,24-Nov-2026,P005,600,2,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+441,O0037-2,17-Nov-2026,24-Nov-2026,P005,600,2,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+442,O0037-2,17-Nov-2026,24-Nov-2026,P005,600,2,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+443,O0037-2,17-Nov-2026,24-Nov-2026,P005,600,2,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+444,O0037-2,17-Nov-2026,24-Nov-2026,P005,600,2,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+445,O0047-2,20-Nov-2026,27-Nov-2026,P005,200,2,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+446,O0047-2,20-Nov-2026,27-Nov-2026,P005,200,2,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+447,O0047-2,20-Nov-2026,27-Nov-2026,P005,200,2,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+448,O0047-2,20-Nov-2026,27-Nov-2026,P005,200,2,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+449,O0047-2,20-Nov-2026,27-Nov-2026,P005,200,2,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+450,O0047-2,20-Nov-2026,27-Nov-2026,P005,200,2,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+451,O0040-2,23-Nov-2026,23-Dec-2026,P002,360,4,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,72
+452,O0040-2,23-Nov-2026,23-Dec-2026,P002,360,4,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,5%,72
+453,O0040-2,23-Nov-2026,23-Dec-2026,P002,360,4,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,72
+454,O0040-2,23-Nov-2026,23-Dec-2026,P002,360,4,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,5%,72
+455,O0040-2,23-Nov-2026,23-Dec-2026,P002,360,4,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,72
+456,O0040-2,23-Nov-2026,23-Dec-2026,P002,360,4,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,72
+457,O0020-2,26-Nov-2026,06-Dec-2026,P002,300,3,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,72
+458,O0020-2,26-Nov-2026,06-Dec-2026,P002,300,3,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,5%,72
+459,O0020-2,26-Nov-2026,06-Dec-2026,P002,300,3,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,72
+460,O0020-2,26-Nov-2026,06-Dec-2026,P002,300,3,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,5%,72
+461,O0020-2,26-Nov-2026,06-Dec-2026,P002,300,3,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,72
+462,O0020-2,26-Nov-2026,06-Dec-2026,P002,300,3,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,72
+463,O0043-2,29-Nov-2026,19-Dec-2026,P002,480,3,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,90
+464,O0043-2,29-Nov-2026,19-Dec-2026,P002,480,3,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,6%,90
+465,O0043-2,29-Nov-2026,19-Dec-2026,P002,480,3,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,90
+466,O0043-2,29-Nov-2026,19-Dec-2026,P002,480,3,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,6%,90
+467,O0043-2,29-Nov-2026,19-Dec-2026,P002,480,3,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,90
+468,O0043-2,29-Nov-2026,19-Dec-2026,P002,480,3,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,90
+469,O0053-2,02-Dec-2026,21-Dec-2026,P004,120,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,4%,120
+470,O0053-2,02-Dec-2026,21-Dec-2026,P004,120,3,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,10%,120
+471,O0053-2,02-Dec-2026,21-Dec-2026,P004,120,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,4%,120
+472,O0053-2,02-Dec-2026,21-Dec-2026,P004,120,3,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,10%,120
+473,O0053-2,02-Dec-2026,21-Dec-2026,P004,120,3,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,4%,120
+474,O0053-2,02-Dec-2026,21-Dec-2026,P004,120,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,4%,120
+475,O0033-2,05-Dec-2026,11-Dec-2026,P005,480,3,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+476,O0033-2,05-Dec-2026,11-Dec-2026,P005,480,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+477,O0033-2,05-Dec-2026,11-Dec-2026,P005,480,3,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+478,O0033-2,05-Dec-2026,11-Dec-2026,P005,480,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+479,O0033-2,05-Dec-2026,11-Dec-2026,P005,480,3,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+480,O0033-2,05-Dec-2026,11-Dec-2026,P005,480,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+481,O0058-2,08-Dec-2026,10-Jan-2027,P002,180,4,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,3%,108
+482,O0058-2,08-Dec-2026,10-Jan-2027,P002,180,4,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,8%,108
+483,O0058-2,08-Dec-2026,10-Jan-2027,P002,180,4,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,3%,108
+484,O0058-2,08-Dec-2026,10-Jan-2027,P002,180,4,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,8%,108
+485,O0058-2,08-Dec-2026,10-Jan-2027,P002,180,4,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,3%,108
+486,O0058-2,08-Dec-2026,10-Jan-2027,P002,180,4,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,3%,108
+487,O0054-2,11-Dec-2026,21-Dec-2026,P003,180,4,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.9,25,501,0.94,Available,8,160,200,70,2%,72
+488,O0054-2,11-Dec-2026,21-Dec-2026,P003,180,4,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.98,25,445,0.91,Available,8,160,200,70,2%,72
+489,O0054-2,11-Dec-2026,21-Dec-2026,P003,180,4,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,1.04,27,304,0.88,Reduced,6,160,200,70,5%,72
+490,O0054-2,11-Dec-2026,21-Dec-2026,P003,180,4,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.67,35,273,0.95,Available,8,160,200,70,2%,72
+491,O0054-2,11-Dec-2026,21-Dec-2026,P003,180,4,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.82,35,242,0.92,Available,8,160,200,70,2%,72
+492,O0054-2,11-Dec-2026,21-Dec-2026,P003,180,4,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.45,15,1034,0.97,Available,8,160,200,70,2%,72
+493,O0050-2,14-Dec-2026,11-Jan-2027,P004,480,4,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,4%,120
+494,O0050-2,14-Dec-2026,11-Jan-2027,P004,480,4,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,10%,120
+495,O0050-2,14-Dec-2026,11-Jan-2027,P004,480,4,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,4%,120
+496,O0050-2,14-Dec-2026,11-Jan-2027,P004,480,4,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,10%,120
+497,O0050-2,14-Dec-2026,11-Jan-2027,P004,480,4,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,4%,120
+498,O0050-2,14-Dec-2026,11-Jan-2027,P004,480,4,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,4%,120
+499,O0044-2,17-Dec-2026,01-Jan-2027,P002,150,4,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,4%,120
+500,O0044-2,17-Dec-2026,01-Jan-2027,P002,150,4,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,10%,120
+501,O0044-2,17-Dec-2026,01-Jan-2027,P002,150,4,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,4%,120
+502,O0044-2,17-Dec-2026,01-Jan-2027,P002,150,4,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,10%,120
+503,O0044-2,17-Dec-2026,01-Jan-2027,P002,150,4,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,4%,120
+504,O0044-2,17-Dec-2026,01-Jan-2027,P002,150,4,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,4%,120
+505,O0036-2,20-Dec-2026,23-Dec-2026,P005,180,4,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+506,O0036-2,20-Dec-2026,23-Dec-2026,P005,180,4,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+507,O0036-2,20-Dec-2026,23-Dec-2026,P005,180,4,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+508,O0036-2,20-Dec-2026,23-Dec-2026,P005,180,4,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+509,O0036-2,20-Dec-2026,23-Dec-2026,P005,180,4,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+510,O0036-2,20-Dec-2026,23-Dec-2026,P005,180,4,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+511,O0009-2,23-Dec-2026,24-Jan-2027,P005,360,4,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+512,O0009-2,23-Dec-2026,24-Jan-2027,P005,360,4,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+513,O0009-2,23-Dec-2026,24-Jan-2027,P005,360,4,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+514,O0009-2,23-Dec-2026,24-Jan-2027,P005,360,4,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+515,O0009-2,23-Dec-2026,24-Jan-2027,P005,360,4,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+516,O0009-2,23-Dec-2026,24-Jan-2027,P005,360,4,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+517,O0016-2,26-Dec-2026,02-Jan-2027,P003,200,4,Standard,Open,OP10,Cutting,1,M01,Cutting,Yes,0.9,25,501,0.94,Available,8,160,200,70,4%,120
+518,O0016-2,26-Dec-2026,02-Jan-2027,P003,200,4,Standard,Open,OP10,Cutting,1,M02,Cutting,Yes,0.98,25,445,0.91,Available,8,160,200,70,4%,120
+519,O0016-2,26-Dec-2026,02-Jan-2027,P003,200,4,Standard,Open,OP10,Cutting,1,M08,Cutting,Yes,1.04,27,304,0.88,Reduced,6,160,200,70,10%,120
+520,O0016-2,26-Dec-2026,02-Jan-2027,P003,200,4,Standard,Open,OP20,Machining,2,M03,Machining,Yes,1.67,35,273,0.95,Available,8,160,200,70,4%,120
+521,O0016-2,26-Dec-2026,02-Jan-2027,P003,200,4,Standard,Open,OP20,Machining,2,M04,Machining,Yes,1.82,35,242,0.92,Available,8,160,200,70,4%,120
+522,O0016-2,26-Dec-2026,02-Jan-2027,P003,200,4,Standard,Open,OP30,Packing,3,M05,Packing,Yes,0.45,15,1034,0.97,Available,8,160,200,70,4%,120
+523,O0019-2,02-Oct-2026,01-Nov-2026,P005,240,1,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,2%,72
+524,O0019-2,02-Oct-2026,01-Nov-2026,P005,240,1,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,2%,72
+525,O0019-2,02-Oct-2026,01-Nov-2026,P005,240,1,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,2%,72
+526,O0019-2,02-Oct-2026,01-Nov-2026,P005,240,1,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,2%,72
+527,O0019-2,02-Oct-2026,01-Nov-2026,P005,240,1,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,5%,72
+528,O0019-2,02-Oct-2026,01-Nov-2026,P005,240,1,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,2%,72
+529,O0018-2,05-Oct-2026,20-Oct-2026,P005,480,1,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,2%,72
+530,O0018-2,05-Oct-2026,20-Oct-2026,P005,480,1,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,2%,72
+531,O0018-2,05-Oct-2026,20-Oct-2026,P005,480,1,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,2%,72
+532,O0018-2,05-Oct-2026,20-Oct-2026,P005,480,1,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,2%,72
+533,O0018-2,05-Oct-2026,20-Oct-2026,P005,480,1,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,5%,72
+534,O0018-2,05-Oct-2026,20-Oct-2026,P005,480,1,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,2%,72
+535,O0024-2,08-Oct-2026,14-Oct-2026,P005,420,1,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+536,O0024-2,08-Oct-2026,14-Oct-2026,P005,420,1,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+537,O0024-2,08-Oct-2026,14-Oct-2026,P005,420,1,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+538,O0024-2,08-Oct-2026,14-Oct-2026,P005,420,1,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+539,O0024-2,08-Oct-2026,14-Oct-2026,P005,420,1,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+540,O0024-2,08-Oct-2026,14-Oct-2026,P005,420,1,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+541,O0005-2,11-Oct-2026,13-Nov-2026,P001,360,2,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,3%,108
+542,O0005-2,11-Oct-2026,13-Nov-2026,P001,360,2,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,3%,108
+543,O0005-2,11-Oct-2026,13-Nov-2026,P001,360,2,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,3%,108
+544,O0005-2,11-Oct-2026,13-Nov-2026,P001,360,2,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,3%,108
+545,O0005-2,11-Oct-2026,13-Nov-2026,P001,360,2,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,3%,108
+546,O0005-2,11-Oct-2026,13-Nov-2026,P001,360,2,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,3%,108
+547,O0057-2,14-Oct-2026,22-Oct-2026,P001,480,1,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,2%,72
+548,O0057-2,14-Oct-2026,22-Oct-2026,P001,480,1,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,2%,72
+549,O0057-2,14-Oct-2026,22-Oct-2026,P001,480,1,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,2%,72
+550,O0057-2,14-Oct-2026,22-Oct-2026,P001,480,1,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,2%,72
+551,O0057-2,14-Oct-2026,22-Oct-2026,P001,480,1,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,2%,72
+552,O0057-2,14-Oct-2026,22-Oct-2026,P001,480,1,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,2%,72
+553,O0055-2,17-Oct-2026,07-Nov-2026,P002,600,1,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,4%,120
+554,O0055-2,17-Oct-2026,07-Nov-2026,P002,600,1,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,10%,120
+555,O0055-2,17-Oct-2026,07-Nov-2026,P002,600,1,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,4%,120
+556,O0055-2,17-Oct-2026,07-Nov-2026,P002,600,1,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,10%,120
+557,O0055-2,17-Oct-2026,07-Nov-2026,P002,600,1,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,4%,120
+558,O0055-2,17-Oct-2026,07-Nov-2026,P002,600,1,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,4%,120
+559,O0007-2,20-Oct-2026,04-Nov-2026,P005,200,1,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,2%,72
+560,O0007-2,20-Oct-2026,04-Nov-2026,P005,200,1,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,2%,72
+561,O0007-2,20-Oct-2026,04-Nov-2026,P005,200,1,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,2%,72
+562,O0007-2,20-Oct-2026,04-Nov-2026,P005,200,1,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,2%,72
+563,O0007-2,20-Oct-2026,04-Nov-2026,P005,200,1,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,5%,72
+564,O0007-2,20-Oct-2026,04-Nov-2026,P005,200,1,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,2%,72
+565,O0008-2,23-Oct-2026,27-Oct-2026,P004,120,1,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,2%,72
+566,O0008-2,23-Oct-2026,27-Oct-2026,P004,120,1,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,5%,72
+567,O0008-2,23-Oct-2026,27-Oct-2026,P004,120,1,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,2%,72
+568,O0008-2,23-Oct-2026,27-Oct-2026,P004,120,1,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,5%,72
+569,O0008-2,23-Oct-2026,27-Oct-2026,P004,120,1,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,2%,72
+570,O0008-2,23-Oct-2026,27-Oct-2026,P004,120,1,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,2%,72
+571,O0049-2,26-Oct-2026,05-Dec-2026,P003,180,3,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.9,25,501,0.94,Available,8,160,200,70,2%,90
+572,O0049-2,26-Oct-2026,05-Dec-2026,P003,180,3,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.98,25,445,0.91,Available,8,160,200,70,2%,90
+573,O0049-2,26-Oct-2026,05-Dec-2026,P003,180,3,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,1.04,27,304,0.88,Reduced,6,160,200,70,6%,90
+574,O0049-2,26-Oct-2026,05-Dec-2026,P003,180,3,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.67,35,273,0.95,Available,8,160,200,70,2%,90
+575,O0049-2,26-Oct-2026,05-Dec-2026,P003,180,3,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.82,35,242,0.92,Available,8,160,200,70,2%,90
+576,O0049-2,26-Oct-2026,05-Dec-2026,P003,180,3,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.45,15,1034,0.97,Available,8,160,200,70,2%,90
+577,O0004-2,29-Oct-2026,11-Nov-2026,P004,600,2,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,4%,120
+578,O0004-2,29-Oct-2026,11-Nov-2026,P004,600,2,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,10%,120
+579,O0004-2,29-Oct-2026,11-Nov-2026,P004,600,2,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,4%,120
+580,O0004-2,29-Oct-2026,11-Nov-2026,P004,600,2,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,10%,120
+581,O0004-2,29-Oct-2026,11-Nov-2026,P004,600,2,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,4%,120
+582,O0004-2,29-Oct-2026,11-Nov-2026,P004,600,2,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,4%,120
+583,O0017-2,01-Nov-2026,29-Nov-2026,P001,120,2,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,3%,108
+584,O0017-2,01-Nov-2026,29-Nov-2026,P001,120,2,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,3%,108
+585,O0017-2,01-Nov-2026,29-Nov-2026,P001,120,2,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,3%,108
+586,O0017-2,01-Nov-2026,29-Nov-2026,P001,120,2,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,3%,108
+587,O0017-2,01-Nov-2026,29-Nov-2026,P001,120,2,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,3%,108
+588,O0017-2,01-Nov-2026,29-Nov-2026,P001,120,2,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,3%,108
+589,O0014-2,04-Nov-2026,23-Nov-2026,P001,360,2,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,4%,120
+590,O0014-2,04-Nov-2026,23-Nov-2026,P001,360,2,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,4%,120
+591,O0014-2,04-Nov-2026,23-Nov-2026,P001,360,2,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,4%,120
+592,O0014-2,04-Nov-2026,23-Nov-2026,P001,360,2,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,4%,120
+593,O0014-2,04-Nov-2026,23-Nov-2026,P001,360,2,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,4%,120
+594,O0014-2,04-Nov-2026,23-Nov-2026,P001,360,2,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,4%,120
+595,O0012-2,07-Nov-2026,11-Nov-2026,P001,200,2,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,2%,72
+596,O0012-2,07-Nov-2026,11-Nov-2026,P001,200,2,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,2%,72
+597,O0012-2,07-Nov-2026,11-Nov-2026,P001,200,2,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,2%,72
+598,O0012-2,07-Nov-2026,11-Nov-2026,P001,200,2,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,2%,72
+599,O0012-2,07-Nov-2026,11-Nov-2026,P001,200,2,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,2%,72
+600,O0012-2,07-Nov-2026,11-Nov-2026,P001,200,2,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,2%,72
+601,O0011-2,10-Nov-2026,13-Dec-2026,P004,360,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,4%,120
+602,O0011-2,10-Nov-2026,13-Dec-2026,P004,360,3,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,10%,120
+603,O0011-2,10-Nov-2026,13-Dec-2026,P004,360,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,4%,120
+604,O0011-2,10-Nov-2026,13-Dec-2026,P004,360,3,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,10%,120
+605,O0011-2,10-Nov-2026,13-Dec-2026,P004,360,3,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,4%,120
+606,O0011-2,10-Nov-2026,13-Dec-2026,P004,360,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,4%,120
+607,O0028-2,13-Nov-2026,22-Nov-2026,P005,420,2,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+608,O0028-2,13-Nov-2026,22-Nov-2026,P005,420,2,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+609,O0028-2,13-Nov-2026,22-Nov-2026,P005,420,2,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+610,O0028-2,13-Nov-2026,22-Nov-2026,P005,420,2,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+611,O0028-2,13-Nov-2026,22-Nov-2026,P005,420,2,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+612,O0028-2,13-Nov-2026,22-Nov-2026,P005,420,2,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+613,O0010-2,16-Nov-2026,07-Dec-2026,P005,120,3,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,2%,72
+614,O0010-2,16-Nov-2026,07-Dec-2026,P005,120,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,2%,72
+615,O0010-2,16-Nov-2026,07-Dec-2026,P005,120,3,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,2%,72
+616,O0010-2,16-Nov-2026,07-Dec-2026,P005,120,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,2%,72
+617,O0010-2,16-Nov-2026,07-Dec-2026,P005,120,3,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,5%,72
+618,O0010-2,16-Nov-2026,07-Dec-2026,P005,120,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,2%,72
+619,O0039-2,19-Nov-2026,02-Dec-2026,P002,200,3,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,4%,120
+620,O0039-2,19-Nov-2026,02-Dec-2026,P002,200,3,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,10%,120
+621,O0039-2,19-Nov-2026,02-Dec-2026,P002,200,3,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,4%,120
+622,O0039-2,19-Nov-2026,02-Dec-2026,P002,200,3,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,10%,120
+623,O0039-2,19-Nov-2026,02-Dec-2026,P002,200,3,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,4%,120
+624,O0039-2,19-Nov-2026,02-Dec-2026,P002,200,3,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,4%,120
+625,O0013-2,22-Nov-2026,30-Nov-2026,P001,420,3,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,2%,72
+626,O0013-2,22-Nov-2026,30-Nov-2026,P001,420,3,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,2%,72
+627,O0013-2,22-Nov-2026,30-Nov-2026,P001,420,3,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,2%,72
+628,O0013-2,22-Nov-2026,30-Nov-2026,P001,420,3,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,2%,72
+629,O0013-2,22-Nov-2026,30-Nov-2026,P001,420,3,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,2%,72
+630,O0013-2,22-Nov-2026,30-Nov-2026,P001,420,3,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,2%,72
+631,O0015-2,25-Nov-2026,02-Jan-2027,P005,600,4,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,2%,72
+632,O0015-2,25-Nov-2026,02-Jan-2027,P005,600,4,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,2%,72
+633,O0015-2,25-Nov-2026,02-Jan-2027,P005,600,4,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,2%,72
+634,O0015-2,25-Nov-2026,02-Jan-2027,P005,600,4,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,2%,72
+635,O0015-2,25-Nov-2026,02-Jan-2027,P005,600,4,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,5%,72
+636,O0015-2,25-Nov-2026,02-Jan-2027,P005,600,4,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,2%,72
+637,O0027-2,28-Nov-2026,11-Dec-2026,P004,200,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,2%,72
+638,O0027-2,28-Nov-2026,11-Dec-2026,P004,200,3,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,5%,72
+639,O0027-2,28-Nov-2026,11-Dec-2026,P004,200,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,2%,72
+640,O0027-2,28-Nov-2026,11-Dec-2026,P004,200,3,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,5%,72
+641,O0027-2,28-Nov-2026,11-Dec-2026,P004,200,3,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,2%,72
+642,O0027-2,28-Nov-2026,11-Dec-2026,P004,200,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,2%,72
+643,O0060-2,01-Dec-2026,24-Dec-2026,P003,600,4,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.9,25,501,0.94,Available,8,160,200,70,2%,72
+644,O0060-2,01-Dec-2026,24-Dec-2026,P003,600,4,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.98,25,445,0.91,Available,8,160,200,70,2%,72
+645,O0060-2,01-Dec-2026,24-Dec-2026,P003,600,4,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,1.04,27,304,0.88,Reduced,6,160,200,70,5%,72
+646,O0060-2,01-Dec-2026,24-Dec-2026,P003,600,4,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.67,35,273,0.95,Available,8,160,200,70,2%,72
+647,O0060-2,01-Dec-2026,24-Dec-2026,P003,600,4,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.82,35,242,0.92,Available,8,160,200,70,2%,72
+648,O0060-2,01-Dec-2026,24-Dec-2026,P003,600,4,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.45,15,1034,0.97,Available,8,160,200,70,2%,72
+649,O0025-2,04-Dec-2026,16-Dec-2026,P001,150,3,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,2%,72
+650,O0025-2,04-Dec-2026,16-Dec-2026,P001,150,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,2%,72
+651,O0025-2,04-Dec-2026,16-Dec-2026,P001,150,3,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,2%,72
+652,O0025-2,04-Dec-2026,16-Dec-2026,P001,150,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,2%,72
+653,O0025-2,04-Dec-2026,16-Dec-2026,P001,150,3,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,2%,72
+654,O0025-2,04-Dec-2026,16-Dec-2026,P001,150,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,2%,72
+655,O0002-2,07-Dec-2026,11-Dec-2026,P005,200,3,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,2%,72
+656,O0002-2,07-Dec-2026,11-Dec-2026,P005,200,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,2%,72
+657,O0002-2,07-Dec-2026,11-Dec-2026,P005,200,3,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,2%,72
+658,O0002-2,07-Dec-2026,11-Dec-2026,P005,200,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,2%,72
+659,O0002-2,07-Dec-2026,11-Dec-2026,P005,200,3,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,5%,72
+660,O0002-2,07-Dec-2026,11-Dec-2026,P005,200,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,2%,72
+661,O0022-2,10-Dec-2026,19-Jan-2027,P005,240,4,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,2%,72
+662,O0022-2,10-Dec-2026,19-Jan-2027,P005,240,4,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,2%,72
+663,O0022-2,10-Dec-2026,19-Jan-2027,P005,240,4,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,2%,72
+664,O0022-2,10-Dec-2026,19-Jan-2027,P005,240,4,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,2%,72
+665,O0022-2,10-Dec-2026,19-Jan-2027,P005,240,4,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,5%,72
+666,O0022-2,10-Dec-2026,19-Jan-2027,P005,240,4,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,2%,72
+667,O0052-2,13-Dec-2026,21-Dec-2026,P001,420,4,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,4%,120
+668,O0052-2,13-Dec-2026,21-Dec-2026,P001,420,4,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,4%,120
+669,O0052-2,13-Dec-2026,21-Dec-2026,P001,420,4,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,4%,120
+670,O0052-2,13-Dec-2026,21-Dec-2026,P001,420,4,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,4%,120
+671,O0052-2,13-Dec-2026,21-Dec-2026,P001,420,4,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,4%,120
+672,O0052-2,13-Dec-2026,21-Dec-2026,P001,420,4,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,4%,120
+673,O0034-2,16-Dec-2026,15-Jan-2027,P005,200,4,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+674,O0034-2,16-Dec-2026,15-Jan-2027,P005,200,4,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+675,O0034-2,16-Dec-2026,15-Jan-2027,P005,200,4,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+676,O0034-2,16-Dec-2026,15-Jan-2027,P005,200,4,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+677,O0034-2,16-Dec-2026,15-Jan-2027,P005,200,4,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+678,O0034-2,16-Dec-2026,15-Jan-2027,P005,200,4,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+679,O0001-2,19-Dec-2026,25-Dec-2026,P003,180,4,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.9,25,501,0.94,Available,8,160,200,70,3%,108
+680,O0001-2,19-Dec-2026,25-Dec-2026,P003,180,4,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.98,25,445,0.91,Available,8,160,200,70,3%,108
+681,O0001-2,19-Dec-2026,25-Dec-2026,P003,180,4,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,1.04,27,304,0.88,Reduced,6,160,200,70,8%,108
+682,O0001-2,19-Dec-2026,25-Dec-2026,P003,180,4,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.67,35,273,0.95,Available,8,160,200,70,3%,108
+683,O0001-2,19-Dec-2026,25-Dec-2026,P003,180,4,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.82,35,242,0.92,Available,8,160,200,70,3%,108
+684,O0001-2,19-Dec-2026,25-Dec-2026,P003,180,4,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.45,15,1034,0.97,Available,8,160,200,70,3%,108
+685,O0051-2,22-Dec-2026,25-Dec-2026,P005,480,4,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+686,O0051-2,22-Dec-2026,25-Dec-2026,P005,480,4,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+687,O0051-2,22-Dec-2026,25-Dec-2026,P005,480,4,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+688,O0051-2,22-Dec-2026,25-Dec-2026,P005,480,4,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+689,O0051-2,22-Dec-2026,25-Dec-2026,P005,480,4,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+690,O0051-2,22-Dec-2026,25-Dec-2026,P005,480,4,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+691,O0003-2,25-Dec-2026,23-Jan-2027,P004,360,4,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,4%,120
+692,O0003-2,25-Dec-2026,23-Jan-2027,P004,360,4,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,10%,120
+693,O0003-2,25-Dec-2026,23-Jan-2027,P004,360,4,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,4%,120
+694,O0003-2,25-Dec-2026,23-Jan-2027,P004,360,4,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,10%,120
+695,O0003-2,25-Dec-2026,23-Jan-2027,P004,360,4,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,4%,120
+696,O0003-2,25-Dec-2026,23-Jan-2027,P004,360,4,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,4%,120
+697,O0032-2,28-Dec-2026,06-Jan-2027,P004,240,4,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,2%,72
+698,O0032-2,28-Dec-2026,06-Jan-2027,P004,240,4,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,5%,72
+699,O0032-2,28-Dec-2026,06-Jan-2027,P004,240,4,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,2%,72
+700,O0032-2,28-Dec-2026,06-Jan-2027,P004,240,4,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,5%,72
+701,O0032-2,28-Dec-2026,06-Jan-2027,P004,240,4,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,2%,72
+702,O0032-2,28-Dec-2026,06-Jan-2027,P004,240,4,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,2%,72
+703,O0041-2,04-Oct-2026,03-Nov-2026,P005,150,1,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+704,O0041-2,04-Oct-2026,03-Nov-2026,P005,150,1,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+705,O0041-2,04-Oct-2026,03-Nov-2026,P005,150,1,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+706,O0041-2,04-Oct-2026,03-Nov-2026,P005,150,1,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+707,O0041-2,04-Oct-2026,03-Nov-2026,P005,150,1,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+708,O0041-2,04-Oct-2026,03-Nov-2026,P005,150,1,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+709,O0046-2,07-Oct-2026,25-Oct-2026,P001,150,1,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,4%,120
+710,O0046-2,07-Oct-2026,25-Oct-2026,P001,150,1,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,4%,120
+711,O0046-2,07-Oct-2026,25-Oct-2026,P001,150,1,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,4%,120
+712,O0046-2,07-Oct-2026,25-Oct-2026,P001,150,1,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,4%,120
+713,O0046-2,07-Oct-2026,25-Oct-2026,P001,150,1,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,4%,120
+714,O0046-2,07-Oct-2026,25-Oct-2026,P001,150,1,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,4%,120
+715,O0006-2,10-Oct-2026,17-Oct-2026,P004,150,1,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,3%,108
+716,O0006-2,10-Oct-2026,17-Oct-2026,P004,150,1,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,8%,108
+717,O0006-2,10-Oct-2026,17-Oct-2026,P004,150,1,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,3%,108
+718,O0006-2,10-Oct-2026,17-Oct-2026,P004,150,1,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,8%,108
+719,O0006-2,10-Oct-2026,17-Oct-2026,P004,150,1,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,3%,108
+720,O0006-2,10-Oct-2026,17-Oct-2026,P004,150,1,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,3%,108
+721,O0031-3,13-Oct-2026,09-Nov-2026,P004,360,2,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,4%,120
+722,O0031-3,13-Oct-2026,09-Nov-2026,P004,360,2,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,10%,120
+723,O0031-3,13-Oct-2026,09-Nov-2026,P004,360,2,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,4%,120
+724,O0031-3,13-Oct-2026,09-Nov-2026,P004,360,2,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,10%,120
+725,O0031-3,13-Oct-2026,09-Nov-2026,P004,360,2,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,4%,120
+726,O0031-3,13-Oct-2026,09-Nov-2026,P004,360,2,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,4%,120
+727,O0021-3,16-Oct-2026,29-Oct-2026,P002,240,1,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,4%,120
+728,O0021-3,16-Oct-2026,29-Oct-2026,P002,240,1,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Maintenance,6,85,140,30,14%,120
+729,O0021-3,16-Oct-2026,29-Oct-2026,P002,240,1,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,4%,120
+730,O0021-3,16-Oct-2026,29-Oct-2026,P002,240,1,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,10%,120
+731,O0021-3,16-Oct-2026,29-Oct-2026,P002,240,1,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,4%,120
+732,O0021-3,16-Oct-2026,29-Oct-2026,P002,240,1,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,4%,120
+733,O0030-3,19-Oct-2026,12-Nov-2026,P001,300,2,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,2%,90
+734,O0030-3,19-Oct-2026,12-Nov-2026,P001,300,2,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,2%,90
+735,O0030-3,19-Oct-2026,12-Nov-2026,P001,300,2,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,2%,90
+736,O0030-3,19-Oct-2026,12-Nov-2026,P001,300,2,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,2%,90
+737,O0030-3,19-Oct-2026,12-Nov-2026,P001,300,2,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,2%,90
+738,O0030-3,19-Oct-2026,12-Nov-2026,P001,300,2,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,2%,90
+739,O0035-3,22-Oct-2026,10-Nov-2026,P002,120,2,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,3%,108
+740,O0035-3,22-Oct-2026,10-Nov-2026,P002,120,2,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,8%,108
+741,O0035-3,22-Oct-2026,10-Nov-2026,P002,120,2,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,3%,108
+742,O0035-3,22-Oct-2026,10-Nov-2026,P002,120,2,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,8%,108
+743,O0035-3,22-Oct-2026,10-Nov-2026,P002,120,2,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,3%,108
+744,O0035-3,22-Oct-2026,10-Nov-2026,P002,120,2,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,3%,108
+745,O0045-3,25-Oct-2026,01-Nov-2026,P003,480,1,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.9,25,501,0.94,Available,8,160,200,70,3%,108
+746,O0045-3,25-Oct-2026,01-Nov-2026,P003,480,1,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.98,25,445,0.91,Available,8,160,200,70,3%,108
+747,O0045-3,25-Oct-2026,01-Nov-2026,P003,480,1,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,1.04,27,304,0.88,Reduced,6,160,200,70,8%,108
+748,O0045-3,25-Oct-2026,01-Nov-2026,P003,480,1,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.67,35,273,0.95,Available,8,160,200,70,3%,108
+749,O0045-3,25-Oct-2026,01-Nov-2026,P003,480,1,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.82,35,242,0.92,Available,8,160,200,70,3%,108
+750,O0045-3,25-Oct-2026,01-Nov-2026,P003,480,1,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.45,15,1034,0.97,Available,8,160,200,70,3%,108
+751,O0059-3,28-Oct-2026,30-Nov-2026,P002,150,3,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,72
+752,O0059-3,28-Oct-2026,30-Nov-2026,P002,150,3,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,5%,72
+753,O0059-3,28-Oct-2026,30-Nov-2026,P002,150,3,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,72
+754,O0059-3,28-Oct-2026,30-Nov-2026,P002,150,3,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,5%,72
+755,O0059-3,28-Oct-2026,30-Nov-2026,P002,150,3,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,72
+756,O0059-3,28-Oct-2026,30-Nov-2026,P002,150,3,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,72
+757,O0023-3,31-Oct-2026,07-Nov-2026,P005,180,1,Standard,Open,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+758,O0023-3,31-Oct-2026,07-Nov-2026,P005,180,1,Standard,Open,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+759,O0023-3,31-Oct-2026,07-Nov-2026,P005,180,1,Standard,Open,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+760,O0023-3,31-Oct-2026,07-Nov-2026,P005,180,1,Standard,Open,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+761,O0023-3,31-Oct-2026,07-Nov-2026,P005,180,1,Standard,Open,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+762,O0023-3,31-Oct-2026,07-Nov-2026,P005,180,1,Standard,Open,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+763,O0026-3,03-Nov-2026,01-Dec-2026,P004,300,3,Key Account,Open,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,4%,120
+764,O0026-3,03-Nov-2026,01-Dec-2026,P004,300,3,Key Account,Open,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,10%,120
+765,O0026-3,03-Nov-2026,01-Dec-2026,P004,300,3,Key Account,Open,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,4%,120
+766,O0026-3,03-Nov-2026,01-Dec-2026,P004,300,3,Key Account,Open,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,10%,120
+767,O0026-3,03-Nov-2026,01-Dec-2026,P004,300,3,Key Account,Open,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,4%,120
+768,O0026-3,03-Nov-2026,01-Dec-2026,P004,300,3,Key Account,Open,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,4%,120
+769,O0042-3,06-Nov-2026,14-Nov-2026,P002,120,2,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,90
+770,O0042-3,06-Nov-2026,14-Nov-2026,P002,120,2,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,6%,90
+771,O0042-3,06-Nov-2026,14-Nov-2026,P002,120,2,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,90
+772,O0042-3,06-Nov-2026,14-Nov-2026,P002,120,2,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,6%,90
+773,O0042-3,06-Nov-2026,14-Nov-2026,P002,120,2,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,90
+774,O0042-3,06-Nov-2026,14-Nov-2026,P002,120,2,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,90
+775,O0056-3,09-Nov-2026,17-Nov-2026,P003,420,2,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.9,25,501,0.94,Available,8,160,200,70,4%,120
+776,O0056-3,09-Nov-2026,17-Nov-2026,P003,420,2,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.98,25,445,0.91,Available,8,160,200,70,4%,120
+777,O0056-3,09-Nov-2026,17-Nov-2026,P003,420,2,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,1.04,27,304,0.88,Reduced,6,160,200,70,10%,120
+778,O0056-3,09-Nov-2026,17-Nov-2026,P003,420,2,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.67,35,273,0.95,Available,8,160,200,70,4%,120
+779,O0056-3,09-Nov-2026,17-Nov-2026,P003,420,2,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.82,35,242,0.92,Available,8,160,200,70,4%,120
+780,O0056-3,09-Nov-2026,17-Nov-2026,P003,420,2,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.45,15,1034,0.97,Available,8,160,200,70,4%,120
+781,O0038-3,12-Nov-2026,15-Dec-2026,P004,180,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,2%,72
+782,O0038-3,12-Nov-2026,15-Dec-2026,P004,180,3,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,5%,72
+783,O0038-3,12-Nov-2026,15-Dec-2026,P004,180,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,2%,72
+784,O0038-3,12-Nov-2026,15-Dec-2026,P004,180,3,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,5%,72
+785,O0038-3,12-Nov-2026,15-Dec-2026,P004,180,3,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,2%,72
+786,O0038-3,12-Nov-2026,15-Dec-2026,P004,180,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,2%,72
+787,O0029-3,15-Nov-2026,27-Nov-2026,P002,600,2,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,72
+788,O0029-3,15-Nov-2026,27-Nov-2026,P002,600,2,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,5%,72
+789,O0029-3,15-Nov-2026,27-Nov-2026,P002,600,2,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,72
+790,O0029-3,15-Nov-2026,27-Nov-2026,P002,600,2,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,5%,72
+791,O0029-3,15-Nov-2026,27-Nov-2026,P002,600,2,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,72
+792,O0029-3,15-Nov-2026,27-Nov-2026,P002,600,2,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,72
+793,O0048-3,18-Nov-2026,07-Dec-2026,P002,120,3,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,72
+794,O0048-3,18-Nov-2026,07-Dec-2026,P002,120,3,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,5%,72
+795,O0048-3,18-Nov-2026,07-Dec-2026,P002,120,3,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,72
+796,O0048-3,18-Nov-2026,07-Dec-2026,P002,120,3,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,5%,72
+797,O0048-3,18-Nov-2026,07-Dec-2026,P002,120,3,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,72
+798,O0048-3,18-Nov-2026,07-Dec-2026,P002,120,3,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,72
+799,O0037-3,21-Nov-2026,05-Dec-2026,P005,600,3,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+800,O0037-3,21-Nov-2026,05-Dec-2026,P005,600,3,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+801,O0037-3,21-Nov-2026,05-Dec-2026,P005,600,3,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+802,O0037-3,21-Nov-2026,05-Dec-2026,P005,600,3,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+803,O0037-3,21-Nov-2026,05-Dec-2026,P005,600,3,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+804,O0037-3,21-Nov-2026,05-Dec-2026,P005,600,3,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+805,O0047-3,24-Nov-2026,30-Nov-2026,P005,200,3,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+806,O0047-3,24-Nov-2026,30-Nov-2026,P005,200,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+807,O0047-3,24-Nov-2026,30-Nov-2026,P005,200,3,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+808,O0047-3,24-Nov-2026,30-Nov-2026,P005,200,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+809,O0047-3,24-Nov-2026,30-Nov-2026,P005,200,3,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+810,O0047-3,24-Nov-2026,30-Nov-2026,P005,200,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+811,O0040-3,27-Nov-2026,27-Dec-2026,P002,360,4,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,72
+812,O0040-3,27-Nov-2026,27-Dec-2026,P002,360,4,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,5%,72
+813,O0040-3,27-Nov-2026,27-Dec-2026,P002,360,4,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,72
+814,O0040-3,27-Nov-2026,27-Dec-2026,P002,360,4,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,5%,72
+815,O0040-3,27-Nov-2026,27-Dec-2026,P002,360,4,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,72
+816,O0040-3,27-Nov-2026,27-Dec-2026,P002,360,4,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,72
+817,O0020-3,30-Nov-2026,14-Dec-2026,P002,300,3,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,72
+818,O0020-3,30-Nov-2026,14-Dec-2026,P002,300,3,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,5%,72
+819,O0020-3,30-Nov-2026,14-Dec-2026,P002,300,3,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,72
+820,O0020-3,30-Nov-2026,14-Dec-2026,P002,300,3,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,5%,72
+821,O0020-3,30-Nov-2026,14-Dec-2026,P002,300,3,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,72
+822,O0020-3,30-Nov-2026,14-Dec-2026,P002,300,3,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,72
+823,O0043-3,03-Dec-2026,21-Dec-2026,P002,480,4,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,2%,90
+824,O0043-3,03-Dec-2026,21-Dec-2026,P002,480,4,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,6%,90
+825,O0043-3,03-Dec-2026,21-Dec-2026,P002,480,4,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,2%,90
+826,O0043-3,03-Dec-2026,21-Dec-2026,P002,480,4,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,6%,90
+827,O0043-3,03-Dec-2026,21-Dec-2026,P002,480,4,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,2%,90
+828,O0043-3,03-Dec-2026,21-Dec-2026,P002,480,4,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,2%,90
+829,O0053-3,06-Dec-2026,19-Dec-2026,P004,120,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,4%,120
+830,O0053-3,06-Dec-2026,19-Dec-2026,P004,120,3,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,10%,120
+831,O0053-3,06-Dec-2026,19-Dec-2026,P004,120,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,4%,120
+832,O0053-3,06-Dec-2026,19-Dec-2026,P004,120,3,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,10%,120
+833,O0053-3,06-Dec-2026,19-Dec-2026,P004,120,3,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,4%,120
+834,O0053-3,06-Dec-2026,19-Dec-2026,P004,120,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,4%,120
+835,O0033-3,09-Dec-2026,16-Dec-2026,P005,480,3,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+836,O0033-3,09-Dec-2026,16-Dec-2026,P005,480,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+837,O0033-3,09-Dec-2026,16-Dec-2026,P005,480,3,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+838,O0033-3,09-Dec-2026,16-Dec-2026,P005,480,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+839,O0033-3,09-Dec-2026,16-Dec-2026,P005,480,3,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+840,O0033-3,09-Dec-2026,16-Dec-2026,P005,480,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+841,O0058-3,12-Dec-2026,11-Jan-2027,P002,180,4,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,3%,108
+842,O0058-3,12-Dec-2026,11-Jan-2027,P002,180,4,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,8%,108
+843,O0058-3,12-Dec-2026,11-Jan-2027,P002,180,4,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,3%,108
+844,O0058-3,12-Dec-2026,11-Jan-2027,P002,180,4,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,8%,108
+845,O0058-3,12-Dec-2026,11-Jan-2027,P002,180,4,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,3%,108
+846,O0058-3,12-Dec-2026,11-Jan-2027,P002,180,4,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,3%,108
+847,O0054-3,15-Dec-2026,23-Dec-2026,P003,180,4,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.9,25,501,0.94,Available,8,160,200,70,2%,72
+848,O0054-3,15-Dec-2026,23-Dec-2026,P003,180,4,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.98,25,445,0.91,Available,8,160,200,70,2%,72
+849,O0054-3,15-Dec-2026,23-Dec-2026,P003,180,4,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,1.04,27,304,0.88,Reduced,6,160,200,70,5%,72
+850,O0054-3,15-Dec-2026,23-Dec-2026,P003,180,4,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.67,35,273,0.95,Available,8,160,200,70,2%,72
+851,O0054-3,15-Dec-2026,23-Dec-2026,P003,180,4,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.82,35,242,0.92,Available,8,160,200,70,2%,72
+852,O0054-3,15-Dec-2026,23-Dec-2026,P003,180,4,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.45,15,1034,0.97,Available,8,160,200,70,2%,72
+853,O0050-3,18-Dec-2026,15-Jan-2027,P004,480,4,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,4%,120
+854,O0050-3,18-Dec-2026,15-Jan-2027,P004,480,4,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,10%,120
+855,O0050-3,18-Dec-2026,15-Jan-2027,P004,480,4,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,4%,120
+856,O0050-3,18-Dec-2026,15-Jan-2027,P004,480,4,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,10%,120
+857,O0050-3,18-Dec-2026,15-Jan-2027,P004,480,4,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,4%,120
+858,O0050-3,18-Dec-2026,15-Jan-2027,P004,480,4,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,4%,120
+859,O0044-3,21-Dec-2026,04-Jan-2027,P002,150,4,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,4%,120
+860,O0044-3,21-Dec-2026,04-Jan-2027,P002,150,4,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,10%,120
+861,O0044-3,21-Dec-2026,04-Jan-2027,P002,150,4,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,4%,120
+862,O0044-3,21-Dec-2026,04-Jan-2027,P002,150,4,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,10%,120
+863,O0044-3,21-Dec-2026,04-Jan-2027,P002,150,4,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,4%,120
+864,O0044-3,21-Dec-2026,04-Jan-2027,P002,150,4,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,4%,120
+865,O0036-3,24-Dec-2026,01-Jan-2027,P005,180,4,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+866,O0036-3,24-Dec-2026,01-Jan-2027,P005,180,4,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+867,O0036-3,24-Dec-2026,01-Jan-2027,P005,180,4,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+868,O0036-3,24-Dec-2026,01-Jan-2027,P005,180,4,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+869,O0036-3,24-Dec-2026,01-Jan-2027,P005,180,4,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+870,O0036-3,24-Dec-2026,01-Jan-2027,P005,180,4,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+871,O0009-3,27-Dec-2026,27-Jan-2027,P005,360,4,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+872,O0009-3,27-Dec-2026,27-Jan-2027,P005,360,4,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+873,O0009-3,27-Dec-2026,27-Jan-2027,P005,360,4,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+874,O0009-3,27-Dec-2026,27-Jan-2027,P005,360,4,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+875,O0009-3,27-Dec-2026,27-Jan-2027,P005,360,4,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+876,O0009-3,27-Dec-2026,27-Jan-2027,P005,360,4,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+877,O0016-3,03-Oct-2026,12-Oct-2026,P003,200,1,Standard,Open,OP10,Cutting,1,M01,Cutting,Yes,0.9,25,501,0.94,Available,8,160,200,70,4%,120
+878,O0016-3,03-Oct-2026,12-Oct-2026,P003,200,1,Standard,Open,OP10,Cutting,1,M02,Cutting,Yes,0.98,25,445,0.91,Available,8,160,200,70,4%,120
+879,O0016-3,03-Oct-2026,12-Oct-2026,P003,200,1,Standard,Open,OP10,Cutting,1,M08,Cutting,Yes,1.04,27,304,0.88,Reduced,6,160,200,70,10%,120
+880,O0016-3,03-Oct-2026,12-Oct-2026,P003,200,1,Standard,Open,OP20,Machining,2,M03,Machining,Yes,1.67,35,273,0.95,Available,8,160,200,70,4%,120
+881,O0016-3,03-Oct-2026,12-Oct-2026,P003,200,1,Standard,Open,OP20,Machining,2,M04,Machining,Yes,1.82,35,242,0.92,Available,8,160,200,70,4%,120
+882,O0016-3,03-Oct-2026,12-Oct-2026,P003,200,1,Standard,Open,OP30,Packing,3,M05,Packing,Yes,0.45,15,1034,0.97,Available,8,160,200,70,4%,120
+883,O0019-3,06-Oct-2026,29-Oct-2026,P005,240,1,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,2%,72
+884,O0019-3,06-Oct-2026,29-Oct-2026,P005,240,1,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,2%,72
+885,O0019-3,06-Oct-2026,29-Oct-2026,P005,240,1,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,2%,72
+886,O0019-3,06-Oct-2026,29-Oct-2026,P005,240,1,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,2%,72
+887,O0019-3,06-Oct-2026,29-Oct-2026,P005,240,1,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,5%,72
+888,O0019-3,06-Oct-2026,29-Oct-2026,P005,240,1,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,2%,72
+889,O0018-3,09-Oct-2026,19-Oct-2026,P005,480,1,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,2%,72
+890,O0018-3,09-Oct-2026,19-Oct-2026,P005,480,1,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,2%,72
+891,O0018-3,09-Oct-2026,19-Oct-2026,P005,480,1,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,2%,72
+892,O0018-3,09-Oct-2026,19-Oct-2026,P005,480,1,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,2%,72
+893,O0018-3,09-Oct-2026,19-Oct-2026,P005,480,1,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,5%,72
+894,O0018-3,09-Oct-2026,19-Oct-2026,P005,480,1,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,2%,72
+895,O0024-3,12-Oct-2026,19-Oct-2026,P005,420,1,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+896,O0024-3,12-Oct-2026,19-Oct-2026,P005,420,1,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+897,O0024-3,12-Oct-2026,19-Oct-2026,P005,420,1,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+898,O0024-3,12-Oct-2026,19-Oct-2026,P005,420,1,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+899,O0024-3,12-Oct-2026,19-Oct-2026,P005,420,1,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+900,O0024-3,12-Oct-2026,19-Oct-2026,P005,420,1,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+901,O0005-3,15-Oct-2026,09-Nov-2026,P001,360,2,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,3%,108
+902,O0005-3,15-Oct-2026,09-Nov-2026,P001,360,2,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,3%,108
+903,O0005-3,15-Oct-2026,09-Nov-2026,P001,360,2,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,3%,108
+904,O0005-3,15-Oct-2026,09-Nov-2026,P001,360,2,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,3%,108
+905,O0005-3,15-Oct-2026,09-Nov-2026,P001,360,2,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,3%,108
+906,O0005-3,15-Oct-2026,09-Nov-2026,P001,360,2,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,3%,108
+907,O0057-3,18-Oct-2026,30-Oct-2026,P001,480,1,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,2%,72
+908,O0057-3,18-Oct-2026,30-Oct-2026,P001,480,1,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,2%,72
+909,O0057-3,18-Oct-2026,30-Oct-2026,P001,480,1,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,2%,72
+910,O0057-3,18-Oct-2026,30-Oct-2026,P001,480,1,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,2%,72
+911,O0057-3,18-Oct-2026,30-Oct-2026,P001,480,1,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,2%,72
+912,O0057-3,18-Oct-2026,30-Oct-2026,P001,480,1,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,2%,72
+913,O0055-3,21-Oct-2026,15-Nov-2026,P002,600,2,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,4%,120
+914,O0055-3,21-Oct-2026,15-Nov-2026,P002,600,2,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,10%,120
+915,O0055-3,21-Oct-2026,15-Nov-2026,P002,600,2,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,4%,120
+916,O0055-3,21-Oct-2026,15-Nov-2026,P002,600,2,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,10%,120
+917,O0055-3,21-Oct-2026,15-Nov-2026,P002,600,2,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,4%,120
+918,O0055-3,21-Oct-2026,15-Nov-2026,P002,600,2,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,4%,120
+919,O0007-3,24-Oct-2026,29-Oct-2026,P005,200,1,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,2%,72
+920,O0007-3,24-Oct-2026,29-Oct-2026,P005,200,1,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,2%,72
+921,O0007-3,24-Oct-2026,29-Oct-2026,P005,200,1,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,2%,72
+922,O0007-3,24-Oct-2026,29-Oct-2026,P005,200,1,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,2%,72
+923,O0007-3,24-Oct-2026,29-Oct-2026,P005,200,1,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,5%,72
+924,O0007-3,24-Oct-2026,29-Oct-2026,P005,200,1,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,2%,72
+925,O0008-3,27-Oct-2026,30-Oct-2026,P004,120,1,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,2%,72
+926,O0008-3,27-Oct-2026,30-Oct-2026,P004,120,1,Key Account,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,5%,72
+927,O0008-3,27-Oct-2026,30-Oct-2026,P004,120,1,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,2%,72
+928,O0008-3,27-Oct-2026,30-Oct-2026,P004,120,1,Key Account,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,5%,72
+929,O0008-3,27-Oct-2026,30-Oct-2026,P004,120,1,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,2%,72
+930,O0008-3,27-Oct-2026,30-Oct-2026,P004,120,1,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,2%,72
+931,O0049-3,30-Oct-2026,05-Dec-2026,P003,180,3,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.9,25,501,0.94,Available,8,160,200,70,2%,90
+932,O0049-3,30-Oct-2026,05-Dec-2026,P003,180,3,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.98,25,445,0.91,Available,8,160,200,70,2%,90
+933,O0049-3,30-Oct-2026,05-Dec-2026,P003,180,3,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,1.04,27,304,0.88,Reduced,6,160,200,70,6%,90
+934,O0049-3,30-Oct-2026,05-Dec-2026,P003,180,3,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.67,35,273,0.95,Available,8,160,200,70,2%,90
+935,O0049-3,30-Oct-2026,05-Dec-2026,P003,180,3,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.82,35,242,0.92,Available,8,160,200,70,2%,90
+936,O0049-3,30-Oct-2026,05-Dec-2026,P003,180,3,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.45,15,1034,0.97,Available,8,160,200,70,2%,90
+937,O0004-3,02-Nov-2026,13-Nov-2026,P004,600,2,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,4%,120
+938,O0004-3,02-Nov-2026,13-Nov-2026,P004,600,2,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,10%,120
+939,O0004-3,02-Nov-2026,13-Nov-2026,P004,600,2,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,4%,120
+940,O0004-3,02-Nov-2026,13-Nov-2026,P004,600,2,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,10%,120
+941,O0004-3,02-Nov-2026,13-Nov-2026,P004,600,2,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,4%,120
+942,O0004-3,02-Nov-2026,13-Nov-2026,P004,600,2,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,4%,120
+943,O0017-3,05-Nov-2026,26-Nov-2026,P001,120,2,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,3%,108
+944,O0017-3,05-Nov-2026,26-Nov-2026,P001,120,2,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,3%,108
+945,O0017-3,05-Nov-2026,26-Nov-2026,P001,120,2,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,3%,108
+946,O0017-3,05-Nov-2026,26-Nov-2026,P001,120,2,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,3%,108
+947,O0017-3,05-Nov-2026,26-Nov-2026,P001,120,2,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,3%,108
+948,O0017-3,05-Nov-2026,26-Nov-2026,P001,120,2,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,3%,108
+949,O0014-3,08-Nov-2026,14-Nov-2026,P001,360,2,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,4%,120
+950,O0014-3,08-Nov-2026,14-Nov-2026,P001,360,2,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,4%,120
+951,O0014-3,08-Nov-2026,14-Nov-2026,P001,360,2,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,4%,120
+952,O0014-3,08-Nov-2026,14-Nov-2026,P001,360,2,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,4%,120
+953,O0014-3,08-Nov-2026,14-Nov-2026,P001,360,2,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,4%,120
+954,O0014-3,08-Nov-2026,14-Nov-2026,P001,360,2,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,4%,120
+955,O0012-3,11-Nov-2026,15-Nov-2026,P001,200,2,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,2%,72
+956,O0012-3,11-Nov-2026,15-Nov-2026,P001,200,2,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,2%,72
+957,O0012-3,11-Nov-2026,15-Nov-2026,P001,200,2,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,2%,72
+958,O0012-3,11-Nov-2026,15-Nov-2026,P001,200,2,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,2%,72
+959,O0012-3,11-Nov-2026,15-Nov-2026,P001,200,2,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,2%,72
+960,O0012-3,11-Nov-2026,15-Nov-2026,P001,200,2,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,2%,72
+961,O0011-3,14-Nov-2026,11-Dec-2026,P004,360,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.82,27,532,0.91,Available,8,95,150,40,4%,120
+962,O0011-3,14-Nov-2026,11-Dec-2026,P004,360,3,Standard,Released,OP10,Cutting,1,M08,Cutting,Yes,0.88,29,360,0.88,Reduced,6,95,150,40,10%,120
+963,O0011-3,14-Nov-2026,11-Dec-2026,P004,360,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.53,37,288,0.92,Available,8,95,150,40,4%,120
+964,O0011-3,14-Nov-2026,11-Dec-2026,P004,360,3,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.64,39,195,0.89,Reduced,6,95,150,40,10%,120
+965,O0011-3,14-Nov-2026,11-Dec-2026,P004,360,3,Standard,Released,OP30,Packing,3,M05,Packing,Yes,0.39,17,1193,0.97,Available,8,95,150,40,4%,120
+966,O0011-3,14-Nov-2026,11-Dec-2026,P004,360,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.42,17,1074,0.94,Available,8,95,150,40,4%,120
+967,O0028-3,17-Nov-2026,25-Nov-2026,P005,420,2,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,4%,120
+968,O0028-3,17-Nov-2026,25-Nov-2026,P005,420,2,Export,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,4%,120
+969,O0028-3,17-Nov-2026,25-Nov-2026,P005,420,2,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,4%,120
+970,O0028-3,17-Nov-2026,25-Nov-2026,P005,420,2,Export,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,4%,120
+971,O0028-3,17-Nov-2026,25-Nov-2026,P005,420,2,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,10%,120
+972,O0028-3,17-Nov-2026,25-Nov-2026,P005,420,2,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,4%,120
+973,O0010-3,20-Nov-2026,19-Dec-2026,P005,120,3,Standard,Released,OP10,Cutting,1,M01,Cutting,Yes,0.63,29,716,0.94,Available,8,210,170,55,2%,72
+974,O0010-3,20-Nov-2026,19-Dec-2026,P005,120,3,Standard,Released,OP10,Cutting,1,M02,Cutting,Yes,0.68,29,642,0.91,Available,8,210,170,55,2%,72
+975,O0010-3,20-Nov-2026,19-Dec-2026,P005,120,3,Standard,Released,OP20,Machining,2,M03,Machining,Yes,1.15,39,396,0.95,Available,8,210,170,55,2%,72
+976,O0010-3,20-Nov-2026,19-Dec-2026,P005,120,3,Standard,Released,OP20,Machining,2,M04,Machining,Yes,1.24,39,356,0.92,Available,8,210,170,55,2%,72
+977,O0010-3,20-Nov-2026,19-Dec-2026,P005,120,3,Standard,Released,OP20,Machining,2,M07,Machining,Yes,1.33,41,240,0.89,Reduced,6,210,170,55,5%,72
+978,O0010-3,20-Nov-2026,19-Dec-2026,P005,120,3,Standard,Released,OP30,Packing,3,M06,Packing,Yes,0.35,19,1289,0.94,Available,8,210,170,55,2%,72
+979,O0039-3,23-Nov-2026,13-Dec-2026,P002,200,3,Export,Released,OP10,Cutting,1,M01,Cutting,Yes,0.8,23,564,0.94,Available,8,85,140,30,4%,120
+980,O0039-3,23-Nov-2026,13-Dec-2026,P002,200,3,Export,Released,OP10,Cutting,1,M08,Cutting,Yes,0.92,25,344,0.88,Reduced,6,85,140,30,10%,120
+981,O0039-3,23-Nov-2026,13-Dec-2026,P002,200,3,Export,Released,OP20,Machining,2,M03,Machining,Yes,1.52,33,300,0.95,Available,8,85,140,30,4%,120
+982,O0039-3,23-Nov-2026,13-Dec-2026,P002,200,3,Export,Released,OP20,Machining,2,M07,Machining,Yes,1.77,35,181,0.89,Reduced,6,85,140,30,10%,120
+983,O0039-3,23-Nov-2026,13-Dec-2026,P002,200,3,Export,Released,OP30,Packing,3,M05,Packing,Yes,0.41,13,1135,0.97,Available,8,85,140,30,4%,120
+984,O0039-3,23-Nov-2026,13-Dec-2026,P002,200,3,Export,Released,OP30,Packing,3,M06,Packing,Yes,0.44,13,1025,0.94,Available,8,85,140,30,4%,120
+985,O0013-3,26-Nov-2026,29-Nov-2026,P001,420,2,Key Account,Released,OP10,Cutting,1,M01,Cutting,Yes,0.68,21,663,0.94,Available,8,120,180,45,2%,72
+986,O0013-3,26-Nov-2026,29-Nov-2026,P001,420,2,Key Account,Released,OP10,Cutting,1,M02,Cutting,Yes,0.74,21,590,0.91,Available,8,120,180,45,2%,72
+987,O0013-3,26-Nov-2026,29-Nov-2026,P001,420,2,Key Account,Released,OP20,Machining,2,M03,Machining,Yes,1.27,31,359,0.95,Available,8,120,180,45,2%,72
+988,O0013-3,26-Nov-2026,29-Nov-2026,P001,420,2,Key Account,Released,OP20,Machining,2,M04,Machining,Yes,1.38,31,320,0.92,Available,8,120,180,45,2%,72
+989,O0013-3,26-Nov-2026,29-Nov-2026,P001,420,2,Key Account,Released,OP30,Packing,3,M05,Packing,Yes,0.37,11,1258,0.97,Available,8,120,180,45,2%,72
+990,O0013-3,26-Nov-2026,29-Nov-2026,P001,420,2,Key Account,Released,OP30,Packing,3,M06,Packing,Yes,0.4,11,1128,0.94,Available,8,120,180,45,0.018,72
