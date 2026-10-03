@@ -7,17 +7,11 @@ using Random
 
 export build_eligible_pairs, score_candidates
 
-#Checks if the specified column in the DataFrame contains strictly numeric values. Triggers a warning if non-numeric or incompatible types are found.
-function validate_numeric_column(df::DataFrame, col::Symbol)
-    if !(eltype(skipmissing(df[!, col])) <: Real)
-        @warn "Warning: Column $col is not strictly numeric. Please check the data types!"
-    end
-end
-
-#= Applies Min-Max normalization to scale an array of values into a [0.0, 1.0] range.
-- If `higher_is_better` is false (default), smaller original values get scores closer to 1.0.
-- If `higher_is_better` is true, larger original values get scores closer to 1.0.
-=#
+# HELPER FUNCTIONS 
+    #= Applies Min-Max normalization to scale an array of values into a [0.0, 1.0] range.
+    - If `higher_is_better` is false (default), smaller original values get scores closer to 1.0.
+    - If `higher_is_better` is true, larger original values get scores closer to 1.0.
+    =#
 function normalized_score(x::AbstractVector; higher_is_better::Bool=false)
     min_val = minimum(x)
     max_val = maximum(x)
@@ -34,9 +28,10 @@ function normalized_score(x::AbstractVector; higher_is_better::Bool=false)
     end
 end
 
-#Filters out machines under maintenance and creates a dictionary mapping each Order_ID to its list of eligible Machine_IDs.
+# MAIN FUNCTIONS
+    #Filters out machines under maintenance and creates a dictionary mapping each Order_ID to its list of eligible Machine_IDs.
 function build_eligible_pairs(df::DataFrame)
-    # 1. Store the original list of orders BEFORE filtering to accurately track lost orders
+    # Store the original list of orders BEFORE filtering to accurately track lost orders
     original_orders = unique(df.Order_ID)
     # Exclude machines that are currently under maintenance to ensure operational validity
     df_clean = filter(
@@ -59,17 +54,10 @@ function build_eligible_pairs(df::DataFrame)
     # Warn about orders with no eligible machine left
     lost = []
     surviving_orders = unique([k[1] for k in keys(my_dict)])
-    
-    for order in original_orders # MUST loop over original_orders
-        if !(order in surviving_orders)
-            push!(lost, order)
-        end
+    lost = setdiff(original_orders, surviving_orders)
+    if !isempty(lost)
+       @warn "Orders with no eligible machine: $lost"
     end
-    
-    if length(lost) > 0
-        @warn "The following orders have no eligible machines left after filtering: $(lost)"
-    end
-    
     return my_dict
 end
 
@@ -130,8 +118,6 @@ function score_candidates(df::DataFrame, α::Real =0.7)
     # Blend P50 and P90 into a single Risk-Adjusted Time using the confidence factor α
     df_scored.Weighted_Time = α .* df_scored.P50_Time .+ (1 - α) .* df_scored.P90_Time
     df_scored.Risk_Adjusted_Time = round.(df_scored.Weighted_Time, digits = 2)
-    
-    validate_numeric_column(df_scored, time_col)
 
     # Initialize columns for normalized scores
     for col in (:Time_Score, :Breakdown_Score, :Efficiency_Score)
