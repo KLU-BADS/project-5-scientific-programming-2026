@@ -1,7 +1,7 @@
 module DataModule
 
 using DataFrames
-using XLSX
+using CSV 
 using Dates
 using Statistics
 
@@ -161,16 +161,16 @@ function validate_data(df::DataFrame)
 end
 
 """
-    load_and_clean_data(path; sheet="Sheet1")
+    load_and_clean_data(path)
 
-Load the new manufacturing Excel dataset, normalize its column names,
+Load the new manufacturing CSV dataset, normalize its column names,
 convert data types, standardize categorical values, remove duplicate rows,
 and validate the result.
 """
-function load_and_clean_data(path::AbstractString; sheet::AbstractString="Sheet1")
+function load_and_clean_data(path::AbstractString)
     isfile(path) || error("Input file not found: $path")
 
-    raw = DataFrame(XLSX.readtable(path, sheet))
+    raw = CSV.read(path, DataFrame)
     _rename_columns!(raw)
 
     missing_cols = setdiff(REQUIRED_COLUMNS, names(raw))
