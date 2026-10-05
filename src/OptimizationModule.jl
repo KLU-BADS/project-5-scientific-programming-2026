@@ -218,3 +218,78 @@ function build_schedule(plan::DataFrame, orders::DataFrame)
     sort!(schedule, [:Order_ID, :Sequence])
     return schedule
 end
+
+"""
+    replan_schedule(plan, candidates, orders; iterations=2)
+
+Try local machine reassignment for late operations. A candidate swap is kept
+when it reduces total schedule lateness while preserving one assignment per
+order-operation.
+"""
+function replan_schedule(plan::DataFrame, candidates::DataFrame,
+                         orders::DataFrame; iterations::Int=2)
+    current_plan = copy(plan)
+    current_schedule = build_schedule(current_plan, orders)
+
+    for _ in 1:iterations
+        late = current_schedule[current_schedule.Lateness_Hours .> 0, :]
+        isempty(late) && break
+
+        improved = false
+
+        # Try the most late operations first.
+        sort!(late, :Lateness_Hours, rev=true)
+
+        for lr in eachrow(late)
+            oid = string(lr.Order_ID)
+            seq = Int(lr.Sequence)
+            current_machine = string(lr.Machine_ID)
+
+            alternatives = candidates[
+                (string.(candidates.Order_ID) .== oid) .&
+                (candidates.Sequence .== seq) .&
+                (string.(candidates.Machine_ID) .!= current_machine),
+                :
+            ]
+
+            isempty(alternatives) && continue
+
+            base_total = sum(current_schedule.Lateness_Hours)
+            best_total = base_total
+            best_plan = nothing
+
+            for ar in eachrow(alternatives)
+                trial = copy(current_plan)
+                row_idx = findfirst(
+                    (string.(trial.Order_ID) .== oid) .&
+                    (trial.Sequence .== seq)
+                )
+
+                row_idx === nothing && continue
+                trial[row_idx, :] = ar
+
+                sched = build_schedule(trial, orders)
+                total = sum(sched.Lateness_Hours)
+
+                if total + 1e-8 < best_total
+                    best_total = total
+                    best_plan = trial
+                end
+            end
+
+            if best_plan !== nothing
+                current_plan = best_plan
+                current_schedule = build_schedule(current_plan, orders)
+                current_plan.Assignment_Status = fill("Replanned", nrow(current_plan))
+                improved = true
+                break
+            end
+        end
+
+        improved || break
+    end
+
+    return current_plan, current_schedule
+end
+
+end
