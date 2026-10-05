@@ -37,7 +37,9 @@ function build_eligible_pairs(df::DataFrame)
     df_clean = filter(
         row ->
             uppercase(strip(string(row.Eligible))) == "YES" &&
-            uppercase(strip(string(row.Machine_status))) != "MAINTENANCE",
+            uppercase(strip(string(row.Machine_status))) != "MAINTENANCE" &&
+            row.Order_Quantity <= row.Machine_Capacity_Units_Shift &&  
+            (row.Setup_time_min + row.Standard_Cycle_Time_Min_Unit * row.Order_Quantity) <= (row.Available_Hours_Shift * 60.0),
         df 
     )
     
@@ -64,14 +66,14 @@ end
 # Simulate the completion time of one (order, machine) pair n times.
 #   T = Total_Standard_Time, p = Breakdown_Probability, D = Breakdown_Duration_Min
 # Returns a vector with n simulated completion times.
-function simulate_times(T, p, D; n = 10_000)
+function simulate_times(T, p, D, rng; n = 10_000)
     times = zeros(n)
     for i in 1:n
         # Step 1: normal run time, mean = 1.02*T, standard deviation = 0.02*T
-        t = T * (1.02 + 0.02 * randn())
+        t = T * (1.02 + 0.02 * randn(rng))
 
         # Step 2: does the machine break down? If yes, add the repair time D
-        if rand() < p
+        if rand(rng) < p
             t += D
         end
 
@@ -80,7 +82,8 @@ function simulate_times(T, p, D; n = 10_000)
     return times
 end
 
-function score_candidates(df::DataFrame, α::Real =0.7)
+function score_candidates(df::DataFrame, α::Real =0.7, seed::Int = 42)
+    rng = MersenneTwister(seed)
     # Define column names used for scoring
     ROUTE_COLS = [:Order_ID, :Operation_Id, :Operation_Name, :Sequence]
     efficiency_col = :machine_Efficiency              
@@ -90,7 +93,9 @@ function score_candidates(df::DataFrame, α::Real =0.7)
     df_scored = filter(
         row ->
             uppercase(strip(string(row.Eligible))) == "YES" &&
-            uppercase(strip(string(row.Machine_status))) != "MAINTENANCE",
+            uppercase(strip(string(row.Machine_status))) != "MAINTENANCE" &&
+            row.Order_Quantity <= row.Machine_Capacity_Units_Shift &&  
+            (row.Setup_time_min + row.Standard_Cycle_Time_Min_Unit * row.Order_Quantity) <= (row.Available_Hours_Shift * 60.0),
         df
     )
 
@@ -106,7 +111,8 @@ function score_candidates(df::DataFrame, α::Real =0.7)
         times = simulate_times(
             df_scored.Total_Standard_Time[i],
             df_scored.Breakdown_Probability[i],
-            df_scored.Breakdown_Duration_Min[i]
+            df_scored.Breakdown_Duration_Min[i],
+            rng
         )
         p50[i] = quantile(times, 0.5)
         p90[i] = quantile(times, 0.9)
