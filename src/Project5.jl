@@ -1,6 +1,6 @@
 module Project5
 
-include("dataModule.jl")
+include("DataModule.jl")
 include("DemandModule.jl")
 include("ScoringModule.jl")
 include("OptimizationModule.jl")
