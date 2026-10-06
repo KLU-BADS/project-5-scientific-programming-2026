@@ -7,10 +7,10 @@ export demand_analysis, priority_weight
 
 
 # Demand Analysis
-function demand_analysis(df_clean)
+function demand_analysis(df::DataFrame)
 
     # Group data by Order_ID
-    order_groups = groupby(df_clean, :Order_ID)
+    order_groups = groupby(df::DataFrame, :Order_ID)
 
     # Create one row per Order_ID
     df_order_level = combine(
@@ -26,7 +26,7 @@ function demand_analysis(df_clean)
 
     # Create product-level inventory table
     df_inventory = combine(
-        groupby(df_clean, :Product_ID),
+        groupby(df::DataFrame, :Product_ID),
         :Current_Stock => first => :Current_Stock,
         :Safety_Stock => first => :Safety_Stock,
         :Reserved_Stock => first => :Reserved_Stock
@@ -88,7 +88,11 @@ function demand_analysis(df_clean)
             inventory - inventory_used
 
     end
-
+    # Only keep orders that still need production
+    df_demand_inventory = filter(
+        row -> row.Required_Production_Qty > 0,
+        df_demand_inventory
+    )
     return df_demand_inventory
 end
 
