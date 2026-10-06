@@ -4,6 +4,7 @@ using DataFrames
 using Dates
 using JuMP
 using HiGHS
+using CSV
 import MathOptInterface as MOI
 
 export optimize_allocation, build_schedule, replan_schedule
@@ -216,6 +217,7 @@ function build_schedule(plan::DataFrame, orders::DataFrame)
     isempty(plan) && error("Cannot schedule an empty plan.")
     schedule = _schedule_once(plan, orders)
     sort!(schedule, [:Order_ID, :Sequence])
+    save && CSV.write("production_plan.csv", schedule)
     return schedule
 end
 
@@ -290,6 +292,7 @@ function replan_schedule(plan::DataFrame, candidates::DataFrame,
     end
 
     return current_plan, current_schedule
+    CSV.write("production_plan.csv", current_schedule)
 end
 
 end
