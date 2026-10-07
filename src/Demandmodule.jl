@@ -18,7 +18,7 @@ function demand_analysis(df::DataFrame)
         :Product_ID => first => :Product_ID,
         :Order_Date => first => :Order_Date,
         :Order_Quantity => first => :Order_Quantity,
-        :Due_date => first => :Due_date,
+        :Due_Date => first => :Due_Date,
         :Priority => first => :Priority,
         :Customer_Type => first => :Customer_Type,
         :Order_Status => first => :Order_Status
@@ -44,7 +44,7 @@ function demand_analysis(df::DataFrame)
     # Earlier due date = higher urgency
     sort!(
         df_demand_inventory,
-        [:Product_ID, :Priority, :Due_date]
+        [:Product_ID, :Priority, :Due_Date]
     )
 
     # Store remaining available inventory by product
@@ -114,11 +114,11 @@ function priority_weight(df)
         df.Order_Quantity ./ max_quantity
 
     # Deadline score
-    min_due_date = minimum(df.Due_date)
+    min_Due_Date = minimum(df.Due_Date)
 
     days_to_due =
         Dates.value.(
-            df.Due_date .- min_due_date
+            df.Due_Date .- min_Due_Date
         )
 
     max_days = maximum(days_to_due)
