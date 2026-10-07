@@ -213,7 +213,7 @@ Build an operation-level schedule. Operations are sequenced in the order
 defined by `Sequence`, while machine availability and predecessor completion
 are respected.
 """
-function build_schedule(plan::DataFrame, orders::DataFrame)
+function build_schedule(plan::DataFrame, orders::DataFrame; save::Bool=false)
     isempty(plan) && error("Cannot schedule an empty plan.")
     schedule = _schedule_once(plan, orders)
     sort!(schedule, [:Order_ID, :Sequence])
@@ -291,8 +291,9 @@ function replan_schedule(plan::DataFrame, candidates::DataFrame,
         improved || break
     end
 
-    return current_plan, current_schedule
     CSV.write("production_plan.csv", current_schedule)
+    return current_plan, current_schedule
+    
 end
 
 end
