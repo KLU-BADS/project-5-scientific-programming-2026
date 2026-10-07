@@ -24,12 +24,12 @@ end
 # =========================================================================
 df_test = DataFrame(
     Order_ID = [1, 1, 2, 2, 3],
-    Operation_Id = ["OP10", "OP20", "OP10", "OP20", "OP10"],
+    Operation_ID = ["OP10", "OP20", "OP10", "OP20", "OP10"],
     Operation_Name = ["Cutting", "Assembly", "Cutting", "Assembly", "Cutting"],
     Sequence = [1, 2, 1, 2, 1],
-    Machine_Id = ["M_A", "M_B", "M_A", "M_B", "M_C"],
+    Machine_ID = ["M_A", "M_B", "M_A", "M_B", "M_C"],
     Eligible = ["Yes", "Yes", "Yes", "Yes", "Yes"],
-    Machine_status = ["Active", "Active", "Active", "MAINTENANCE", "Active"],
+    Machine_Status = ["Active", "Active", "Active", "MAINTENANCE", "Active"],
 
     Setup_time_min = [10.0, 15.0, 10.0, 10.0, 10.0],
     Standard_Cycle_Time_Min_Unit = [1.0, 2.0, 1.0, 1.0, 1.0],
@@ -51,12 +51,12 @@ df_before = copy(df_test)
     # Separate, minimal dataset for this function only
     df_build = DataFrame(
         Order_ID = [1, 1, 2],
-        Operation_Id = ["OP10", "OP20", "OP10"],
+        Operation_ID = ["OP10", "OP20", "OP10"],
         Operation_Name = ["Cutting", "Machining", "Cutting"],
         Sequence = [1, 2, 1],
-        Machine_Id = ["M01", "M03", "M02"],
+        Machine_ID = ["M01", "M03", "M02"],
         Eligible = ["Yes", "Yes", "Yes"],
-        Machine_status = ["Active", "Active", "MAINTENANCE"],  # M02 under maintenance
+        Machine_Status = ["Active", "Active", "MAINTENANCE"],  # M02 under maintenance
         Setup_time_min = [10.0, 10.0, 10.0],
         Standard_Cycle_Time_Min_Unit = [1.0, 1.0, 1.0],
         Order_Quantity = [100, 100, 100],
@@ -81,12 +81,12 @@ end
 @testset "Test 3: score_candidates (Debug)" begin
     df_score = DataFrame(
         Order_ID = [1, 1],
-        Operation_Id = ["OP10", "OP10"],
+        Operation_ID = ["OP10", "OP10"],
         Operation_Name = ["Cutting", "Cutting"],
         Sequence = [1, 1],
-        Machine_Id = ["M01", "M02"],
+        Machine_ID = ["M01", "M02"],
         Eligible = ["Yes", "Yes"],
-        Machine_status = ["Available", "Available"],
+        Machine_Status = ["Available", "Available"],
         Setup_time_min = [10.0, 15.0],
         Standard_Cycle_Time_Min_Unit = [1.0, 1.5],
         Order_Quantity = [100, 100],
