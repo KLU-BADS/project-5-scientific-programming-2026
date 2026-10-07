@@ -92,7 +92,7 @@ end
         Order_Quantity = [100, 100],
         Breakdown_Probability = [0.05, 0.10],
         Breakdown_Duration_Min = [30.0, 60.0],
-        machine_Efficiency = [0.90, 0.85],
+        Machine_Efficiency = [0.90, 0.85],          # ← sửa tên cột ở đây
         Machine_Capacity_Units_Shift = [1000, 1000],
         Available_Hours_Shift = [8.0, 8.0]
     )
@@ -107,6 +107,7 @@ end
     @test "Risk_Adjusted_Time" in names(df_scored)
     @test "Candidate_Score" in names(df_scored)
 
+    # Test reproducibility with the same seed
     df_scored_retry = ScoringModule.score_candidates(df_score, 0.7, 42)
     @test df_scored.Risk_Adjusted_Time == df_scored_retry.Risk_Adjusted_Time
 end
