@@ -37,7 +37,7 @@ function build_eligible_pairs(df::DataFrame)
     df_clean = filter(
         row ->
             uppercase(strip(string(row.Eligible))) == "YES" &&
-            uppercase(strip(string(row.Machine_status))) != "MAINTENANCE" &&
+            uppercase(strip(string(row.Machine_Status))) != "MAINTENANCE" &&
             row.Order_Quantity <= row.Machine_Capacity_Units_Shift &&  
             (row.Setup_time_min + row.Standard_Cycle_Time_Min_Unit * row.Order_Quantity) <= (row.Available_Hours_Shift * 60.0),
         df 
@@ -45,11 +45,11 @@ function build_eligible_pairs(df::DataFrame)
     
     # Group to create Eligible Pairs AND preserve Routing/Operation information
     my_dict = Dict()
-    grouped_df = groupby(df_clean, [:Order_ID, :Operation_Id, :Operation_Name, :Sequence])
+    grouped_df = groupby(df_clean, [:Order_ID, :Operation_ID, :Operation_Name, :Sequence])
     
     for group in grouped_df
-        route_key = (group.Order_ID[1], group.Operation_Id[1], group.Operation_Name[1], group.Sequence[1])
-        machine_list = collect(group.Machine_Id)
+        route_key = (group.Order_ID[1], group.Operation_ID[1], group.Operation_Name[1], group.Sequence[1])
+        machine_list = collect(group.Machine_ID)
         my_dict[route_key] = machine_list
     end
     
@@ -85,15 +85,15 @@ end
 function score_candidates(df::DataFrame, α::Real =0.7, seed::Int = 42)
     rng = MersenneTwister(seed)
     # Define column names used for scoring
-    ROUTE_COLS = [:Order_ID, :Operation_Id, :Operation_Name, :Sequence]
-    efficiency_col = :machine_Efficiency              
+    ROUTE_COLS = [:Order_ID, :Operation_ID, :Operation_Name, :Sequence]
+    efficiency_col = :Machine_Efficiency             
     time_col = :Risk_Adjusted_Time
 
     # Eliminate unavailable machines
     df_scored = filter(
         row ->
             uppercase(strip(string(row.Eligible))) == "YES" &&
-            uppercase(strip(string(row.Machine_status))) != "MAINTENANCE" &&
+            uppercase(strip(string(row.Machine_Status))) != "MAINTENANCE" &&
             row.Order_Quantity <= row.Machine_Capacity_Units_Shift &&  
             (row.Setup_time_min + row.Standard_Cycle_Time_Min_Unit * row.Order_Quantity) <= (row.Available_Hours_Shift * 60.0),
         df
