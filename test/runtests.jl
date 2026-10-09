@@ -1,17 +1,8 @@
 using Project5
 using Test
 
-# Every @testset that fails will be reported individually, so give them
-# names that tell you what broke.
-
 @testset "Project5.jl" begin
-
-    @testset "hello" begin
-        # hello() prints, so it returns nothing. What it prints is checked by
-        # the jldoctest in its docstring, which runs when the docs are built.
-        @test hello() === nothing
-    end
-
-    # Add a @testset for each function you write.
-
+    results, decision = Project5.run_my_module()
+    @test results.on_time == 1.0       # all example orders on time
+    @test decision[1] == false         # "NO → Implement & Monitor"
 end
