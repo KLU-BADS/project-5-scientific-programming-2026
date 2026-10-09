@@ -6,12 +6,13 @@ A minimal Julia package to start a project from.
 module Project5
 
 # Files to be included
+include("hello.jl")
 include("EvaluationModule.jl")
 
 using .Evaluation
 
 # Functions to be exported
-export run_my_module
+export hello, run_my_module
 
 """Folder with the example data files (in the `test` folder next to `src`)."""
 const EXAMPLE_FOLDER = joinpath(@__DIR__, "..", "test")
