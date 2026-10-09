@@ -6,9 +6,10 @@ A minimal Julia package to start a project from.
 module Project5
 
 # Files to be included
-include("hello.jl")
+include("DataModule.jl")
 
 # Functions to be exported
-export hello
+export load_and_clean_data, validate_data
 
 end # module Project5
+
