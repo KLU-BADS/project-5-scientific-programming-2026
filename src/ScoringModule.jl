@@ -46,18 +46,18 @@ Returns:
 - Values = Vector of eligible Machine_IDs
 """
 function build_eligible_pairs(df::DataFrame)
-    # Only keep orders that still need to be produced (filtered by DemandModule).
+    """ Only keep orders that still need to be produced (filtered by DemandModule). """
     if hasproperty(df, :Required_Production_Qty)
         df = filter(row -> row.Required_Production_Qty > 0, df)
     end
 
-    # Keep track of original orders to detect those with no eligible machines
+    """ Keep track of original orders to detect those with no eligible machines. """
     original_orders = unique(df.Order_ID)
 
-    # Decide which quantity column to use
+    """ Decide which quantity column to use. """
     qty_col = hasproperty(df, :Required_Production_Qty) ? :Required_Production_Qty : :Order_Quantity
 
-    # Filter machines that are eligible and have enough capacity/time
+    """ Filter machines that are eligible and have enough capacity/time """
     df_clean = filter(
         row ->
             uppercase(strip(string(row.Eligible))) == "YES" &&
@@ -67,7 +67,7 @@ function build_eligible_pairs(df::DataFrame)
         df 
     )   
     
-    # Build dictionary of eligible machines per operation step
+    """ Build dictionary of eligible machines per operation step. """
     my_dict = Dict()
     grouped_df = groupby(df_clean, [:Order_ID, :Operation_ID, :Operation_Name, :Sequence])
     
@@ -77,7 +77,7 @@ function build_eligible_pairs(df::DataFrame)
         my_dict[route_key] = machine_list
     end
     
-    # Warn about orders that lost all eligible machines
+    """ Warn about orders that lost all eligible machines. """
     lost = []
     surviving_orders = unique([k[1] for k in keys(my_dict)])
     lost = setdiff(original_orders, surviving_orders)
@@ -103,10 +103,10 @@ Returns a vector of `n` simulated completion times.
 function simulate_times(T, p, D, rng; n = 10_000)
     times = zeros(n)
     for i in 1:n
-        # Normal variation around standard time (mean ≈ 1.02*T)
+        """ Normal variation around standard time (mean ≈ 1.02*T). """
         t = T * (1.02 + 0.02 * randn(rng))
 
-        # Add breakdown time if the machine fails
+        """ Add breakdown time if the machine fails """
         if rand(rng) < p
             t += D
         end
@@ -134,16 +134,16 @@ Returns a DataFrame with detailed scoring columns.
 function score_candidates(df::DataFrame, α::Real =0.7, seed::Int = 42)
     rng = MersenneTwister(seed)
     
-    # Define column names used for scoring
+    """ Define column names used for scoring. """
     ROUTE_COLS = [:Order_ID, :Operation_ID, :Operation_Name, :Sequence]
     efficiency_col = :Machine_Efficiency             
     time_col = :Risk_Adjusted_Time
     
-    # Keep only orders that still require production
+    """ Keep only orders that still require production. """
     if hasproperty(df, :Required_Production_Qty)
         df = filter(row -> row.Required_Production_Qty > 0, df)
     end
-    # Decide quantity column & filter eligible machines
+    """ Decide quantity column & filter eligible machines. """
     qty_col = hasproperty(df, :Required_Production_Qty) ? :Required_Production_Qty : :Order_Quantity
     
     df_scored = filter(
@@ -155,10 +155,10 @@ function score_candidates(df::DataFrame, α::Real =0.7, seed::Int = 42)
         df
     )
 
-    # Calculate standard processing time
+    """ Calculate standard processing time. """
     df_scored.Total_Standard_Time = df_scored.Setup_time_min .+ (df_scored.Standard_Cycle_Time_Min_Unit .* df_scored[!, qty_col])
     
-    # Perform Monte Carlo simulation to extract median (P50) and safe worst-case (P90) times
+    """ Perform Monte Carlo simulation to extract median (P50) and safe worst-case (P90) times. """
     n_rows = nrow(df_scored)
     p50 = zeros(n_rows)
     p90 = zeros(n_rows)
@@ -177,25 +177,25 @@ function score_candidates(df::DataFrame, α::Real =0.7, seed::Int = 42)
     df_scored.P50_Time = round.(p50, digits = 2)
     df_scored.P90_Time = round.(p90, digits = 2)   
    
-    # Blend P50 and P90 into a single Risk-Adjusted Time using the confidence factor α
+    """ Blend P50 and P90 into a single Risk-Adjusted Time using the confidence factor α. """
     df_scored.Weighted_Time = α .* df_scored.P50_Time .+ (1 - α) .* df_scored.P90_Time
     df_scored.Risk_Adjusted_Time = round.(df_scored.Weighted_Time, digits = 2)
 
-    # Initialize columns for normalized scores
+    """ Initialize columns for normalized scores """
     for col in (:Time_Score, :Breakdown_Score, :Efficiency_Score)
         df_scored[!, col] = zeros(n_rows)
     end
 
-    # Local Optimization: Compare and normalize machines strictly within the same operation step
+    """ Local Optimization: Compare and normalize machines strictly within the same operation step. """
     for group in groupby(df_scored, ROUTE_COLS)
         group[!, :Time_Score] .= normalized_score(group[!, time_col])
         group[!, :Breakdown_Score] .= normalized_score(group.Breakdown_Probability)
         group[!, :Efficiency_Score] .= normalized_score(group[!, efficiency_col]; higher_is_better = true)
     end
 
-    # Integrate Priority_Score (from DemandModule) if available
+    """ Integrate Priority_Score (from DemandModule) if available. """
     if hasproperty(df_scored, :Priority_Score)
-        # Normalize Priority_Score to [0, 1]
+        """ Normalize Priority_Score to [0, 1] """
     priority_norm = normalized_score(df_scored.Priority_Score; higher_is_better = true)
     weights = (
         time = 0.45,
@@ -207,13 +207,13 @@ function score_candidates(df::DataFrame, α::Real =0.7, seed::Int = 42)
     df_scored.Breakdown_Contribution = weights.breakdown .* df_scored.Breakdown_Score
     df_scored.Efficiency_Contribution = weights.efficiency .* df_scored.Efficiency_Score
     df_scored.Priority_Contribution   = weights.priority .* priority_norm
-    # Convert Score to Penalty
+    """ Convert Score to Penalty """
     df_scored.Candidate_Score = df_scored.Time_Contribution .+
                                 df_scored.Breakdown_Contribution .+
                                 df_scored.Efficiency_Contribution .+
                                 df_scored.Priority_Contribution                            
     else
-    # Fallback weights when Priority_Score is not present
+    """ Fallback weights when Priority_Score is not present """
     weights = (
         time = 0.50,
         breakdown = 0.20,
@@ -228,7 +228,7 @@ function score_candidates(df::DataFrame, α::Real =0.7, seed::Int = 42)
                                 df_scored.Breakdown_Contribution .+
                                 df_scored.Efficiency_Contribution
     end
-    # Convert score to penalty (lower penalty = better assignment)   
+    """ Convert score to penalty (lower penalty = better assignment) """
     df_scored.Assignment_Penalty = 1.0 .- df_scored.Candidate_Score
     
     return df_scored
