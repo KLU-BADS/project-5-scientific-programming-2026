@@ -1,0 +1,7 @@
+Order_ID,Product_ID,Sequence,Operation_ID,Order_Quantity,Due_Date,Current_Stock,Reserved_Stock,Safety_Stock,Machine_ID,Available_Hours_Shift
+O1,P1,1,OP10,100,2026-10-06,50,10,20,M1,8
+O1,P1,2,OP20,100,2026-10-06,50,10,20,M2,8
+O2,P2,1,OP10,80,2026-10-07,30,5,10,M1,8
+O2,P2,2,OP20,80,2026-10-07,30,5,10,M2,8
+O3,P1,1,OP10,60,2026-10-08,50,10,20,M1,8
+O3,P1,2,OP20,60,2026-10-08,50,10,20,M2,8
