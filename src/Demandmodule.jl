@@ -6,13 +6,13 @@ using Dates
 export demand_analysis, priority_weight
 
 
-# Demand Analysis
+""" Demand Analysis the goal is to transform it from machine-level rows into order-level production requirements """
 function demand_analysis(df::DataFrame)
 
-    # Group data by Order_ID
+    """ Group data by Order_ID. Put rows belonging to the same order into the same group, so that we can calculate demand at the order level without double-counting the order quantity """
     order_groups = groupby(df::DataFrame, :Order_ID)
 
-    # Create one row per Order_ID
+    """ Create one row per Order_ID. Combine() takes each group and creates a new table """
     df_order_level = combine(
         order_groups,
         :Product_ID => first => :Product_ID,
@@ -24,7 +24,7 @@ function demand_analysis(df::DataFrame)
         :Order_Status => first => :Order_Status
     )
 
-    # Create product-level inventory table
+    """ Create product-level inventory table. Create one inventory record for each Product_ID. We used groupby to one row per product for inventory information """
     df_inventory = combine(
         groupby(df::DataFrame, :Product_ID),
         :Current_Stock => first => :Current_Stock,
@@ -32,22 +32,23 @@ function demand_analysis(df::DataFrame)
         :Reserved_Stock => first => :Reserved_Stock
     )
 
-    # Join order-level demand with inventory information
+    """ Join order-level demand with inventory information. The purpose is combine the order information with the inventory information for corresponding product """
+
     df_demand_inventory = leftjoin(
         df_order_level,
         df_inventory,
         on = :Product_ID
     )
 
-    # Sort orders:
-    # Priority 1 = highest priority
-    # Earlier due date = higher urgency
+    """ Sort orders. This determines the order in which inventory will be allocated """
+    """ Priority 1 = highest priority """
+    """ Earlier due date = higher urgency """
     sort!(
         df_demand_inventory,
         [:Product_ID, :Priority, :Due_Date]
     )
 
-    # Store remaining available inventory by product
+    """ Store remaining available inventory by product. This creates a dictionary """
     remaining_inventory = Dict{String, Float64}()
 
     for row in eachrow(df_inventory)
@@ -62,11 +63,11 @@ function demand_analysis(df::DataFrame)
 
     end
 
-    # Initialize required production quantity
+    """ Initialize required production quantity. Create the column where will store the result """
     df_demand_inventory.Required_Production_Qty =
         zeros(Float64, nrow(df_demand_inventory))
 
-    # Allocate available inventory to orders
+    """ Allocate available inventory to orders. Process every order, one by one """
     for i in 1:nrow(df_demand_inventory)
 
         product =
@@ -88,7 +89,7 @@ function demand_analysis(df::DataFrame)
             inventory - inventory_used
 
     end
-    # Only keep orders that still need production
+    """ Only keep orders that still need production """
     df_demand_inventory = filter(
         row -> row.Required_Production_Qty > 0,
         df_demand_inventory
@@ -97,23 +98,23 @@ function demand_analysis(df::DataFrame)
 end
 
 
-# Priority Weight
+""" Priority Weight. Calculate a priority score for each order and sort the orders from the highest score to the lowest score """
 function priority_weight(df)
 
-    # Priority score
-    # Priority 1 = highest priority
+    """ Priority score """
+    """ Priority 1 = highest priority """
     max_priority = maximum(df.Priority)
 
     priority_score =
         (max_priority .- df.Priority .+ 1) ./ max_priority
 
-    # Quantity score
+    """ Quantity score """
     max_quantity = maximum(df.Order_Quantity)
 
     quantity_score =
         df.Order_Quantity ./ max_quantity
 
-    # Deadline score
+    """ Deadline score """
     min_Due_Date = minimum(df.Due_Date)
 
     days_to_due =
@@ -128,13 +129,13 @@ function priority_weight(df)
         ones(nrow(df)) :
         1 .- days_to_due ./ max_days
 
-    # Final priority score
+    """ Final priority score """
     df.Priority_Score =
         0.50 .* priority_score .+
         0.30 .* deadline_score .+
         0.20 .* quantity_score
 
-    # Highest score first
+    """ Highest score first """
     sort!(
         df,
         :Priority_Score,
