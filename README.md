@@ -8,10 +8,16 @@
 ## Overview
 
 <!-- DESCRIBE PROJECT PURPOSE BELOW -->
-Title: Demand–Production Gap Analysis and Capacity Optimization in Manufacturing
+**Title:** Demand–Production Gap Analysis and Capacity Optimization in Manufacturing
 
-How can manufacturing demand and production data be analysed to identify shortages, excess production, and machine bottlenecks, and how can production be reallocated to reduce these mismatches and Storing in the warehouse
+This project provides an end-to-end analytical pipeline designed to optimize manufacturing operations. It addresses critical supply chain challenges by identifying production shortages, mitigating excess inventory, uncovering machine bottlenecks, and intelligently reallocating production capacity to ensure on-time delivery.
 
+The system is built entirely in Julia and is composed of five automated, interconnected modules:
+*   **Data Module:** Cleans, preprocesses, and structures raw manufacturing and inventory data.
+*   **Demand Module:** Analyzes net requirements and assigns priority weights to pending orders based on urgency.
+*   **Scoring Module:** Evaluates machine-order compatibility and estimates risk-adjusted processing times (P50/P90 probabilities).
+*   **Optimization Module:** Formulates and solves a Mixed-Integer Linear Programming (MILP) model using `JuMP.jl` and the `HiGHS` solver to minimize tardiness and optimize machine allocation.
+*   **Evaluation Module:** Simulates the generated schedule to report Key Performance Indicators (KPIs) including makespan, on-time delivery rates, machine utilization, and projected inventory stockouts.
 <!-- DESCRIBE PROJECT PURPOSE ABOVE  -->
 
 ## Getting started
@@ -28,13 +34,15 @@ julia --project=.
 
 
 <!-- DESCRIBE THE ESSENTIAL USAGE BELOW -->
-Once the package is cloned you can run:
+Once the package is cloned and the environment is set up, you can run the full production optimization pipeline with a single command. 
+
+Open the Julia REPL in the project folder and run:
 
 ```julia
 using Project5
-hello()
-```
-to print "Hello World" to standard output.
+
+# Execute the complete pipeline: Data → Demand → Scoring → Optimization → Evaluation
+final_plan, final_schedule, evaluation_result, decision = Project5.run_project("Project_Data_Final.csv")
 <!-- DESCRIBE THE ESSENTIAL USAGE ABOVE -->
 
 ## Tests
