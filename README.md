@@ -34,15 +34,12 @@ julia --project=.
 
 
 <!-- DESCRIBE THE ESSENTIAL USAGE BELOW -->
-Once the package is cloned and the environment is set up, you can run the full production optimization pipeline with a single command. 
-
+Once the package is cloned and the environment is set up, you can run the full production optimization pipeline with a single command.
 Open the Julia REPL in the project folder and run:
-
 ```julia
-using Project5
-
 # Execute the complete pipeline: Data → Demand → Scoring → Optimization → Evaluation
 final_plan, final_schedule, evaluation_result, decision = Project5.run_project("Project_Data_Final.csv")
+```
 <!-- DESCRIBE THE ESSENTIAL USAGE ABOVE -->
 
 ## Tests
