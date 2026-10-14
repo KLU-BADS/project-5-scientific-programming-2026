@@ -11,10 +11,25 @@ module Project5
 using DataFrames
 
 # Files to be included (one file per module)
+
+# Data module (step 1): loads the input CSV file and cleans the data.
+# Renames columns, fixes data types, fills missing values and validates the result.
 include("DataModule.jl")
+
+# Demand module (step 2): calculates how much of each order still needs to be produced.
+# Uses order quantity and stock levels, and gives each order a priority score.
 include("Demandmodule.jl")
+
+# Scoring module (step 3): scores every possible order-machine combination.
+# Uses processing times (P50/P90), machine data and order priority.
 include("ScoringModule.jl")
+
+# Optimisation module (step 4): assigns operations to machines using a MILP model.
+# Then builds and replans the final production schedule.
 include("OptimizationModule.jl")
+
+# Evaluation module (step 5): checks the schedule with warehouse and performance KPIs.
+# Writes the evaluation report and decides "Adjust plan needed?" (YES = replan, NO = implement).
 include("EvaluationModule.jl")
 
 using .DataModule
@@ -37,6 +52,9 @@ const MINUTES_PER_HOUR = 60
 
 """Number of local replanning rounds in the Optimisation module."""
 const REPLAN_ITERATIONS = 2
+
+"""Name of the report file written by the Evaluation module (printed at the end of `run_project`)."""
+const REPORT_FILE = "evaluation_report.txt"
 
 """
     run_project(data_file = DEFAULT_DATA_FILE)
@@ -74,7 +92,7 @@ function run_project(data_file::AbstractString = DEFAULT_DATA_FILE)
     scored.Assignment_Status        = fill("Candidate", nrow(scored))
     df_demand.Priority_Weight       = df_demand.Priority_Score
 
-    # 4. Optimisation module: assign machines and build the schedule
+    # 4. Optimisation module: assigjun machines and build the schedule
     plan, objective = OptimizationModule.optimize_allocation(scored, df_demand)
     println("MILP solved. Objective value: ", round(objective, digits = 2))
     final_plan, final_schedule = OptimizationModule.replan_schedule(
@@ -85,6 +103,15 @@ function run_project(data_file::AbstractString = DEFAULT_DATA_FILE)
     df_eval = leftjoin(df_clean, df_demand[!, [:Order_ID, :Required_Production_Qty]], on = :Order_ID)
     df_eval.Required_Production_Qty = coalesce.(df_eval.Required_Production_Qty, 0)
     evaluation_result, decision = Evaluation.run_evaluation(df_eval, final_schedule)
+
+    # 6. Print the evaluation report in the terminal
+    if isfile(REPORT_FILE)
+        println("\n========== EVALUATION REPORT ==========")
+        print(read(REPORT_FILE, String))
+        println("=======================================")
+    else
+        println("Report file not found: ", REPORT_FILE)
+    end
 
     return final_plan, final_schedule, evaluation_result, decision
 end

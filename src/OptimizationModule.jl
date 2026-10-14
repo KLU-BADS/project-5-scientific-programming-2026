@@ -122,13 +122,13 @@ available time, scheduling continues on the next day.
 # Returns
 - A DateTime representing the calculated finishing time.
 """
-function _add_work_hours(start_dt::DateTime, hours::Float64, daily_hours::Int)
-    remaining = max(0.0, hours)
-    current = start_dt
+function _add_work_hours(start_dt::DateTime, hours::Float64, daily_hours::Float64)
+     remaining = max(0.0, hours)
+     current = start_dt
 
     while remaining > 1e-8
         day_start = DateTime(Date(current), Time(8, 0))
-        day_end = day_start + Minute(daily_hours * 60)
+               day_end = day_start + Minute(round(Int, daily_hours * 60))
 
         if current < day_start
             current = day_start
@@ -210,7 +210,7 @@ function _schedule_once(plan::DataFrame, orders::DataFrame)
             idx,
             by = i -> (
                 ready_time[i],
-                -order_info[string(layer.Order_ID[i])].Priority,
+                order_info[string(layer.Order_ID[i])].Priority,
                 order_info[string(layer.Order_ID[i])].Due_Date
             )
         )
@@ -228,7 +228,7 @@ function _schedule_once(plan::DataFrame, orders::DataFrame)
             finish = _add_work_hours(
                 earliest,
                 r.P90_Hours,
-                Int(r.Available_Hours_Shift)
+                Float64(r.Available_Hours_Shift)
             )
 
             machine_next[machine] = finish

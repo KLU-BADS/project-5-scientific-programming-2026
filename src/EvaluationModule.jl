@@ -60,7 +60,7 @@ const PERCENT = 100
 """Number of characters in an ISO date such as "2026-10-02"."""
 const ISO_DATE_LENGTH = 10
 """Invisible marker that Excel sometimes adds at the start of a CSV file."""
-const BYTE_ORDER_MARK = '﻿'
+const BYTE_ORDER_MARK = '\ufeff'
 """Width of the separator line in the printed report."""
 const REPORT_WIDTH = 60
 """Inventory status: stock falls below the reserved amount."""
@@ -89,6 +89,10 @@ to_percent(share) = PERCENT * share
 """Read one column from a CSV row (a Dict) or from a table row of another module."""
 column_value(row::AbstractDict, column::Symbol) = row[String(column)]
 column_value(row, column::Symbol) = getproperty(row, column)
+
+"""True if a CSV row (a Dict) or a table row of another module has the given column."""
+has_column(row::AbstractDict, column::Symbol) = haskey(row, String(column))
+has_column(row, column::Symbol) = hasproperty(row, column)
 
 """Turn a number or a text into a number of type `T` (Int or Float64)."""
 to_number(T, value) = value isa Number ? T(value) : parse(T, string(value))
@@ -133,9 +137,13 @@ function load_data(source)
         product_id = string(column_value(row, :Product_ID))
         sequence   = (to_number(Int, column_value(row, :Sequence)), string(column_value(row, :Operation_ID)))
         last_op[order_id] = max(get(last_op, order_id, sequence), sequence)
-        orders[order_id] = (product = product_id,
-                            qty     = to_number(Int, column_value(row, :Order_Quantity)),
-                            due     = to_date(column_value(row, :Due_Date)))
+                qty = to_number(Int, column_value(row, :Order_Quantity))
+        required = has_column(row, :Required_Production_Qty) ?
+            round(Int, to_number(Float64, column_value(row, :Required_Production_Qty))) : qty
+        orders[order_id] = (product  = product_id,
+                            qty      = qty,
+                            required = required,
+                            due      = to_date(column_value(row, :Due_Date)))
         stock[product_id] = (current  = to_number(Int, column_value(row, :Current_Stock)),
                              reserved = to_number(Int, column_value(row, :Reserved_Stock)),
                              safety   = to_number(Int, column_value(row, :Safety_Stock)))
@@ -213,14 +221,18 @@ function compute_produced(plan, last_op)
     produced
 end
 
-"""On-time rate and counts of late, unplanned and short orders (on time = finished by the due time AND fully produced)."""
+"""On-time rate and counts of late, unplanned and short orders. Orders fully covered by stock count as on time."""
 function compute_delivery(orders, tardiness, produced)
-    is_complete(order_id) = get(produced, order_id, 0) >= orders[order_id].qty
-    on_time_count = count(order_id -> tardiness[order_id] == 0 && is_complete(order_id), keys(tardiness))
+    to_produce = [id for (id, order) in orders if order.required > 0]
+    from_stock = length(orders) - length(to_produce)
+    is_planned(id)  = haskey(tardiness, id)
+    is_complete(id) = get(produced, id, 0) >= orders[id].required
+    on_time_count = from_stock +
+        count(id -> is_planned(id) && tardiness[id] == 0 && is_complete(id), to_produce)
     (on_time   = on_time_count / length(orders),
      late      = count(>(0), values(tardiness)),
-     unplanned = length(orders) - length(tardiness),
-     short     = count(order_id -> !is_complete(order_id), keys(tardiness)))
+     unplanned = count(id -> !is_planned(id), to_produce),
+     short     = count(id -> is_planned(id) && !is_complete(id), to_produce))
 end
 
 """Machine utilisation = busy shift hours / available shift hours."""
@@ -359,7 +371,11 @@ function run_evaluation(cleaned_data, schedule)
     orders, stock, machine_hours, last_op = load_data(cleaned_data)
     results  = evaluate(load_plan(schedule), orders, stock, machine_hours, last_op)
     decision = check_adjust_needed(results)
-    print_report(results; decision = decision)
+       open("evaluation_report.txt", "w") do io      # save the report to the file
+        redirect_stdout(io) do
+            print_report(results; decision = decision)
+        end
+    end
     return results, decision
 end
 
