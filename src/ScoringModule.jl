@@ -65,7 +65,7 @@ A machine is considered eligible only if **all** of the following conditions are
 - `df`: Input DataFrame containing order, machine, and routing information.
   Expected columns include: `Order_ID`, `Operation_ID`, `Operation_Name`, `Sequence`,
   `Machine_ID`, `Eligible`, `Machine_Status`, `Order_Quantity` (or `Required_Production_Qty`),
-  `Machine_Capacity_Units_Shift`, `Setup_time_min`, `Standard_Cycle_Time_Min_Unit`,
+  `Machine_Capacity_Units_Shift`, `Setup_Time_Min`, `Standard_Cycle_Time_Min_Unit`,
   `Available_Hours_Shift`.
 
 # Returns
@@ -92,7 +92,7 @@ function build_eligible_pairs(df::DataFrame)
             uppercase(strip(string(row.Eligible))) == "YES" &&
             uppercase(strip(string(row.Machine_Status))) != "MAINTENANCE" &&
             row[qty_col] <= row.Machine_Capacity_Units_Shift &&
-            (row.Setup_time_min + row.Standard_Cycle_Time_Min_Unit * row[qty_col]) <= (row.Available_Hours_Shift * 60.0),
+            (row.Setup_Time_Min + row.Standard_Cycle_Time_Min_Unit * row[qty_col]) <= (row.Available_Hours_Shift * 60.0),
         df
     )
 
@@ -208,7 +208,7 @@ function score_candidates(df::DataFrame, α::Real = 0.7, seed::Int = 42)
             uppercase(strip(string(row.Eligible))) == "YES" &&
             uppercase(strip(string(row.Machine_Status))) != "MAINTENANCE" &&
             row[qty_col] <= row.Machine_Capacity_Units_Shift &&
-            (row.Setup_time_min + row.Standard_Cycle_Time_Min_Unit * row[qty_col]) <= (row.Available_Hours_Shift * 60.0),
+            (row.Setup_Time_Min + row.Standard_Cycle_Time_Min_Unit * row[qty_col]) <= (row.Available_Hours_Shift * 60.0),
         df
     )
 
@@ -216,7 +216,7 @@ function score_candidates(df::DataFrame, α::Real = 0.7, seed::Int = 42)
     # 3. Nominal processing time
     # ------------------------------------------------------------------
     df_scored.Total_Standard_Time =
-        df_scored.Setup_time_min .+ (df_scored.Standard_Cycle_Time_Min_Unit .* df_scored[!, qty_col])
+        df_scored.Setup_Time_Min .+ (df_scored.Standard_Cycle_Time_Min_Unit .* df_scored[!, qty_col])
 
     # ------------------------------------------------------------------
     # 4. Monte Carlo → P50 & P90
