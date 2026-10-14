@@ -239,7 +239,7 @@ function _to_date(x)
 
     """ Try common ISO/date-time representations. """
     for fmt in (dateformat"yyyy-mm-dd", dateformat"yyyy-mm-dd HH:MM:SS",
-                dateformat"yyyy-mm-ddTHH:MM:SS")
+                 dateformat"yyyy-mm-ddTHH:MM:SS", dateformat"dd-u-yyyy")
         try
             return Date(DateTime(s, fmt))
         catch
