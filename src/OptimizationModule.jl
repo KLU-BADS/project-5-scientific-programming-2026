@@ -1,3 +1,12 @@
+"""
+    OptimizationModule
+
+Optimise order-to-machine allocation, generate an operation-level production
+schedule, and replan assignments when schedule lateness can be reduced.
+
+The module uses JuMP and HiGHS for mixed-integer linear programming and
+DataFrames for handling candidate assignments, orders, and schedules.
+"""
 module OptimizationModule
 
 using DataFrames
@@ -15,6 +24,20 @@ export optimize_allocation, build_schedule, replan_schedule
 Select exactly one eligible machine for every order-operation using a MILP.
 The objective rewards high candidate scores, lower P90 processing time,
 lower breakdown risk, and higher priority.
+
+# Arguments
+- `candidates`: DataFrame containing candidate machine assignments and their
+  scores, processing times, breakdown risks, and available hours.
+- `orders`: DataFrame containing order information, dates, and priority weights.
+
+# Returns
+- `plan`: DataFrame containing the selected machine assignment for each
+  order-operation, with an assignment status.
+- `objective_value`: Objective value of the optimisation model.
+
+# Errors
+Raises an error if the optimisation solver does not return an optimal or
+feasible solution.
 """
 function optimize_allocation(candidates::DataFrame, orders::DataFrame)
     n = nrow(candidates)
@@ -81,6 +104,24 @@ function optimize_allocation(candidates::DataFrame, orders::DataFrame)
     return plan, objective_value(model)
 end
 
+"""
+    _add_work_hours(start_dt, hours, daily_hours)
+
+Calculate a finishing DateTime by adding the specified number of working hours
+to a starting DateTime.
+
+Work is scheduled from 08:00 each day, with the available working duration
+determined by `daily_hours`. If the remaining work exceeds the current day's
+available time, scheduling continues on the next day.
+
+# Arguments
+- `start_dt`: DateTime at which the work can begin.
+- `hours`: Number of working hours to add.
+- `daily_hours`: Available working hours per day.
+
+# Returns
+- A DateTime representing the calculated finishing time.
+"""
 function _add_work_hours(start_dt::DateTime, hours::Float64, daily_hours::Int)
     remaining = max(0.0, hours)
     current = start_dt
@@ -109,6 +150,25 @@ function _add_work_hours(start_dt::DateTime, hours::Float64, daily_hours::Int)
     return current
 end
 
+"""
+    _schedule_once(plan, orders)
+
+Generate a production schedule for the selected machine assignments.
+
+Operations are processed in sequence order. The start of each operation
+depends on the completion of its predecessor and the availability of its
+assigned machine. When multiple operations are ready, priority and due date
+are used to determine their processing order.
+
+# Arguments
+- `plan`: DataFrame containing the selected machine assignments.
+- `orders`: DataFrame containing order dates, due dates, priorities, and
+  product information.
+
+# Returns
+- A DataFrame containing operation-level start and finish times, processing
+  estimates, lateness, on-time status, and related order and machine details.
+"""
 function _schedule_once(plan::DataFrame, orders::DataFrame)
     order_info = Dict(
         string(r.Order_ID) => (
@@ -207,11 +267,25 @@ function _schedule_once(plan::DataFrame, orders::DataFrame)
 end
 
 """
-    build_schedule(plan, orders)
+    build_schedule(plan, orders; save=false)
 
 Build an operation-level schedule. Operations are sequenced in the order
 defined by `Sequence`, while machine availability and predecessor completion
 are respected.
+
+# Arguments
+- `plan`: DataFrame containing the selected machine assignments.
+- `orders`: DataFrame containing order details, dates, priorities, and
+  product information.
+- `save`: Optional Boolean indicating whether to save the schedule to
+  `production_plan.csv`. Defaults to `false`.
+
+# Returns
+- A DataFrame containing the scheduled operations, their start and finish
+  times, and their lateness and on-time status.
+
+# Errors
+Raises an error if `plan` is empty.
 """
 function build_schedule(plan::DataFrame, orders::DataFrame; save::Bool=false)
     isempty(plan) && error("Cannot schedule an empty plan.")
@@ -227,6 +301,22 @@ end
 Try local machine reassignment for late operations. A candidate swap is kept
 when it reduces total schedule lateness while preserving one assignment per
 order-operation.
+
+# Arguments
+- `plan`: DataFrame containing the current selected machine assignments.
+- `candidates`: DataFrame containing the alternative machine assignments
+  available for each order-operation.
+- `orders`: DataFrame containing order information, dates, priorities, and
+  product information.
+- `iterations`: Maximum number of replanning iterations. Defaults to `2`.
+
+# Returns
+- `current_plan`: DataFrame containing the final machine assignments after
+  replanning.
+- `current_schedule`: DataFrame containing the production schedule generated
+  from the final assignments.
+
+The final schedule is saved to `production_plan.csv`.
 """
 function replan_schedule(plan::DataFrame, candidates::DataFrame,
                          orders::DataFrame; iterations::Int=2)
@@ -293,7 +383,7 @@ function replan_schedule(plan::DataFrame, candidates::DataFrame,
 
     CSV.write("production_plan.csv", current_schedule)
     return current_plan, current_schedule
-    
+
 end
 
 end
