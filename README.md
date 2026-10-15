@@ -1,24 +1,23 @@
-# Production_Optimisation.jl 
+# Production_Optimisation.jl
+
 <!-- DO NOT EDIT BELOW -->
 [![Tests](../../actions/workflows/tests.yml/badge.svg)](../../actions/workflows/tests.yml)
 [![Documentation](../../actions/workflows/docs.yml/badge.svg)](../../actions/workflows/docs.yml)
 <!-- DO NOT EDIT ABOVE -->
 
-
 ## Overview
 
-<!-- DESCRIBE PROJECT PURPOSE BELOW -->
 **Title:** Demand–Production Gap Analysis and Capacity Optimization in Manufacturing
 
-This project provides an end-to-end analytical pipeline designed to optimize manufacturing operations. It addresses critical supply chain challenges by identifying production shortages, mitigating excess inventory, uncovering machine bottlenecks, and intelligently reallocating production capacity to ensure on-time delivery.
+This project provides an end-to-end analytical pipeline designed to optimize manufacturing operations. It addresses supply chain challenges by identifying production shortages, accounting for inventory, evaluating machine capacity, and allocating production operations to support on-time delivery.
 
-The system is built entirely in Julia and is composed of five automated, interconnected modules:
-*   **Data Module:** Cleans, preprocesses, and structures raw manufacturing and inventory data.
-*   **Demand Module:** Analyzes net requirements and assigns priority weights to pending orders based on urgency.
-*   **Scoring Module:** Evaluates machine-order compatibility and estimates risk-adjusted processing times (P50/P90 probabilities).
-*   **Optimization Module:** Formulates and solves a Mixed-Integer Linear Programming (MILP) model using `JuMP.jl` and the `HiGHS` solver to minimize tardiness and optimize machine allocation.
-*   **Evaluation Module:** Simulates the generated schedule to report Key Performance Indicators (KPIs) including makespan, on-time delivery rates, machine utilization, and projected inventory stockouts.
-<!-- DESCRIBE PROJECT PURPOSE ABOVE  -->
+The system is built in Julia and consists of five interconnected modules:
+
+- **Data Module:** Cleans, preprocesses, and validates the manufacturing and inventory data.
+- **Demand Module:** Calculates net production requirements and assigns priority weights to pending orders.
+- **Scoring Module:** Evaluates eligible order–machine combinations and estimates risk-adjusted processing times (P50/P90).
+- **Optimization Module:** Uses a Mixed-Integer Linear Programming (MILP) model with `JuMP.jl` and the `HiGHS` solver to select machine assignments, construct a production schedule, and attempt to reduce schedule lateness through replanning.
+- **Evaluation Module:** Evaluates the resulting schedule using performance indicators such as makespan, on-time delivery, machine utilisation, and projected inventory.
 
 ## Getting started
 
@@ -31,30 +30,51 @@ cd project-5-scientific-programming-2026
 julia --project=.
 ```
 <!-- DO NOT EDIT ABOVE -->
+### 1. Install the required dependencies
 
+After starting Julia with the project environment, run:
 
-<!-- DESCRIBE THE ESSENTIAL USAGE BELOW -->
-Once the package is cloned and the environment is set up, you can run the full production optimization pipeline with a single command.
-Open the Julia REPL in the project folder and run:
 ```julia
-# Execute the complete pipeline: Data → Demand → Scoring → Optimization → Evaluation
-final_plan, final_schedule, evaluation_result, decision = Project5.run_project("Project_Data_Final.csv")
+# Install the required packages
+using Pkg
+Pkg.instantiate()
 ```
-<!-- DESCRIBE THE ESSENTIAL USAGE ABOVE -->
 
-## Tests
+This installs the dependencies specified in `Project.toml` and `Manifest.toml`. You only need to do this when setting up the environment for the first time or when the project dependencies change.
 
-<!-- DO NOT EDIT BELOW -->
-Tests are run automatically on GitHub for every push to `main` and on every pull request.
+### 2. Load the project module
 
-> [!TIP]
-> To run the tests locally, run
-> ```bash
-> julia --project=. -e 'using Pkg; Pkg.test()'
-> ```
- 
-<!-- DO NOT EDIT ABOVE -->
+Run the following commands in the same Julia REPL:
 
+```julia
+# Load the Project5 module
+include("src/Project5.jl")
+using .Project5
+```
+
+These commands load the `Project5` module and make its exported functions available.
+
+### 3. Run the complete production optimization pipeline
+
+Execute:
+
+```julia
+# Run the complete pipeline
+final_plan, final_schedule, evaluation_result, decision = run_project()
+
+# Display the final machine assignments
+println(final_plan)
+
+# Display the production schedule
+println(final_schedule)
+
+# Display the evaluation results
+println(evaluation_result)
+
+#  Display the replanning decision
+println(decision)
+```
+The pipeline runs the Data, Demand, Scoring, Optimization, and Evaluation modules. The results show the final machine assignments, production schedule, evaluation results, and replanning decision.
 
 ## Documentation
 
@@ -68,8 +88,7 @@ The [online documentation](https://klu-bads.github.io/project-5-scientific-progr
 > ```
 > and open `docs/build/index.html` in a browser.
 >
-> If building the documentation fails, run the tests locally before. 
-
+> If building the documentation fails, run the tests locally before.
 
 <!-- DO NOT EDIT ABOVE -->
 
@@ -84,4 +103,3 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 <!-- DO NOT EDIT BELOW -->
 MIT. See [LICENSE](LICENSE).
 <!-- DO NOT EDIT ABOVE -->
-
