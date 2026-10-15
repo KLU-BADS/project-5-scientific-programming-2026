@@ -53,6 +53,9 @@ const MINUTES_PER_HOUR = 60
 """Number of local replanning rounds in the Optimisation module."""
 const REPLAN_ITERATIONS = 2
 
+"""Maximum number of rounds through the full loop (Data -> ... -> Evaluation -> back to Data)."""
+const MAX_LOOP_ROUNDS = 3
+
 """Name of the report file written by the Evaluation module (printed at the end of `run_project`)."""
 const REPORT_FILE = "evaluation_report.txt"
 
@@ -70,6 +73,11 @@ Run the whole production optimisation pipeline and print the evaluation report.
 function run_project(data_file::AbstractString = DEFAULT_DATA_FILE)
     # 1. Data module: load and clean the input data
     df_clean = DataModule.load_and_clean_data(data_file)
+    
+    final_plan, final_schedule, evaluation_result, decision = nothing, nothing, nothing, nothing
+    for round_no in 1:MAX_LOOP_ROUNDS
+        println("\n----- Planning round ", round_no, " -----")
+        df_clean = DataModule.apply_adjustments!(df_clean)   # use feedback from the last evaluation
 
     # 2. Demand module: net requirement and priority of each order
     df_demand = DemandModule.demand_analysis(df_clean)
@@ -103,7 +111,12 @@ function run_project(data_file::AbstractString = DEFAULT_DATA_FILE)
     df_eval = leftjoin(df_clean, df_demand[!, [:Order_ID, :Required_Production_Qty]], on = :Order_ID)
     df_eval.Required_Production_Qty = coalesce.(df_eval.Required_Production_Qty, 0)
     evaluation_result, decision = Evaluation.run_evaluation(df_eval, final_schedule)
-
+            adjust_needed = decision[1]
+        println("Round ", round_no, " - Adjust plan needed? ",
+                adjust_needed ? "YES -> back to the Data module" : "NO -> implement")
+        adjust_needed || break      # NO  -> stop the loop
+    end                             # YES -> next round starts again at the Data module
+    
     # 6. Print the evaluation report in the terminal
     if isfile(REPORT_FILE)
         println("\n========== EVALUATION REPORT ==========")

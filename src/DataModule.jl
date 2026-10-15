@@ -42,7 +42,7 @@ using CSV
 using Dates
 using Statistics
 
-export load_and_clean_data, validate_data
+export load_and_clean_data, validate_data, apply_adjustments!
 
 """
 A list of all columns that must exist in the manufacturing dataset after
@@ -405,6 +405,44 @@ function load_and_clean_data(path::AbstractString)
     validate_data(df)
     sort!(df, [:Order_ID, :Sequence, :Machine_ID])
 
+    return df
+end
+"""File written by the Evaluation module when "Adjust plan needed?" = YES."""
+const ADJUSTMENT_FILE = "adjustment_data.csv"
+"""Extra hours per shift given to an overloaded machine."""
+const EXTRA_SHIFT_HOURS = 2
+"""Maximum working hours per day."""
+const MAX_HOURS_PER_DAY = 24
+"""Priority given to a late order (1 = most urgent)."""
+const TOP_PRIORITY = 1
+
+"""
+    apply_adjustments!(df, path = ADJUSTMENT_FILE)
+
+Read the adjustment data from the Evaluation module (if the file exists) and
+apply it to the cleaned data before the next planning run:
+- overloaded machine → more available hours per shift
+- late order → highest priority
+- not planned order or stockout → warning only (needs a planner decision)
+"""
+function apply_adjustments!(df::DataFrame, path::AbstractString = ADJUSTMENT_FILE)
+    isfile(path) || return df                       # no file → previous plan was fine
+    adjustments = CSV.read(path, DataFrame; stringtype = String)
+    for a in eachrow(adjustments)
+        id = string(a.ID)
+        if a.Type == "Machine" && a.Issue == "Overloaded"
+            rows = df.Machine_ID .== id
+            df.Available_Hours_Shift[rows] .= min.(df.Available_Hours_Shift[rows] .+ EXTRA_SHIFT_HOURS,
+                                                   MAX_HOURS_PER_DAY)
+            println("Adjustment: ", id, " gets ", EXTRA_SHIFT_HOURS, " extra hours per shift")
+        elseif a.Type == "Order" && a.Issue == "Late"
+            df.Priority[df.Order_ID .== id] .= TOP_PRIORITY
+            println("Adjustment: ", id, " gets top priority")
+        else
+            println("Check manually: ", a.Type, " ", id, " - ", a.Issue, " (", a.Action, ")")
+        end
+    end
+    validate_data(df)                               # make sure the adjusted data is still valid
     return df
 end
 
