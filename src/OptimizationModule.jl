@@ -18,12 +18,24 @@ import MathOptInterface as MOI
 
 export optimize_allocation, build_schedule, replan_schedule
 
+"""Objective penalty per machine hour planned above the capacity available before a due date."""
+const OVERLOAD_PENALTY = 100.0
+
+"""Share of a machine's hours the MILP may plan (headroom below the 95 % bottleneck limit of the Evaluation module)."""
+const TARGET_LOAD = 0.80
+
 """
     optimize_allocation(candidates, orders)
 
 Select exactly one eligible machine for every order-operation using a MILP.
-The objective rewards high candidate scores, lower P90 processing time,
-lower breakdown risk, and higher priority.
+The objective rewards high candidate scores, lower P90 processing time and
+lower breakdown risk. Processing time weighs more for high-priority orders,
+so they get the faster machines.
+
+Machine capacity is checked per due date: the work of all orders due by a date
+must fit into `TARGET_LOAD` of the machine's hours up to that date. Hours above that capacity are
+allowed but heavily penalised, so the model stays feasible and spreads the load
+over other machines first.
 
 # Arguments
 - `candidates`: DataFrame containing candidate machine assignments and their
@@ -52,21 +64,27 @@ function optimize_allocation(candidates::DataFrame, orders::DataFrame)
         @constraint(model, sum(x[i] for i in idx) == 1)
     end
 
-    # Aggregate machine capacity over the planning horizon.
-    horizon_days = max(
-        1,
-        Dates.value(maximum(orders.Due_Date) - minimum(orders.Order_Date)) + 1
-    )
+    # Machine capacity per due date: work due by `due` must fit into the hours
+    # available from the planning start until `due` (overload = penalised slack).
+    planning_start = minimum(orders.Order_Date)
+    due_map = Dict(string(r.Order_ID) => r.Due_Date for r in eachrow(orders))
+    due = [due_map[string(oid)] for oid in candidates.Order_ID]
 
+    overload = VariableRef[]
     for machine in unique(candidates.Machine_ID)
         idx = findall(candidates.Machine_ID .== machine)
         hours = maximum(candidates.Available_Hours_Shift[idx])
-        capacity = hours * horizon_days
 
-        @constraint(
-            model,
-            sum(candidates.P90_Hours[i] * x[i] for i in idx) <= capacity
-        )
+        for d in unique(due[idx])
+            days = Dates.value(d - planning_start) + 1
+            due_idx = filter(i -> due[i] <= d, idx)
+            slack = @variable(model, lower_bound = 0)
+            push!(overload, slack)
+            @constraint(
+                model,
+                sum(candidates.P90_Hours[i] * x[i] for i in due_idx) <= TARGET_LOAD * hours * days + slack
+            )
+        end
     end
 
     priority_map = Dict(string(r.Order_ID) => Float64(r.Priority_Weight)
@@ -77,23 +95,22 @@ function optimize_allocation(candidates::DataFrame, orders::DataFrame)
         oid = string(candidates.Order_ID[i])
         priority = get(priority_map, oid, 1.0)
 
-        # Larger score is better; P90 and risk are minimized.
-        value = (
-            1.00 * candidates.Score[i] +
-            8.0 * priority -
-            4.0 * candidates.P90_Hours[i] -
+        # Larger score is better; P90 (weighted by priority) and risk are minimized.
+        term = (
+            1.00 * candidates.Score[i] -
+            4.0 * (1 + priority) * candidates.P90_Hours[i] -
             2.0 * candidates.Expected_Breakdown_Hours[i]
         )
-        push!(objective_terms, value)
+        push!(objective_terms, term)
     end
 
-    @objective(model, Max, sum(objective_terms[i] * x[i] for i in 1:n))
+    @objective(model, Max,
+        sum(objective_terms[i] * x[i] for i in 1:n) - OVERLOAD_PENALTY * sum(overload))
 
     optimize!(model)
 
-    status = termination_status(model)
-    status == MOI.OPTIMAL || status == MOI.FEASIBLE ||
-        error("Optimization failed. Solver status: $status")
+    is_solved_and_feasible(model) ||
+        error("Optimization failed. Solver status: $(termination_status(model))")
 
     selected = findall(i -> value(x[i]) > 0.5, 1:n)
     plan = candidates[selected, :]
@@ -143,7 +160,7 @@ function _add_work_hours(start_dt::DateTime, hours::Float64, daily_hours::Float6
         remaining -= use
 
         if remaining > 1e-8
-            current = DateTime(Date(current) + Day(1), Time(8, 0))
+            current = DateTime(Date(day_start) + Day(1), Time(8, 0))
         end
     end
 

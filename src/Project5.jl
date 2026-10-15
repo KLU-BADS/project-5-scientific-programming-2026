@@ -73,6 +73,7 @@ Run the whole production optimisation pipeline and print the evaluation report.
 function run_project(data_file::AbstractString = DEFAULT_DATA_FILE)
     # 1. Data module: load and clean the input data
     df_clean = DataModule.load_and_clean_data(data_file)
+    isfile(DataModule.ADJUSTMENT_FILE) && rm(DataModule.ADJUSTMENT_FILE)   # ignore feedback from an earlier run
     
     final_plan, final_schedule, evaluation_result, decision = nothing, nothing, nothing, nothing
     for round_no in 1:MAX_LOOP_ROUNDS
