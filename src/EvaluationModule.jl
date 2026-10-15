@@ -14,6 +14,8 @@ Calculates: on-time rate, tardiness, makespan, machine utilisation and projected
 Decision — "Adjust plan needed?":
 - Yes → replan: fewer than 90 % of orders on time, a machine above 95 % utilisation,
   a product out of stock, or orders missing or short.
+  The adjustment data (what must change) is saved to `adjustment_data.csv`
+  and sent back to the Data module for the next planning run.
 - No  → no replan needed: the plan is ready to implement.
 
 Use from another module:
@@ -26,7 +28,8 @@ module Evaluation
 
 using Dates, Printf
 
-export run_evaluation, load_data, load_plan, evaluate, check_adjust_needed, print_report
+export run_evaluation, load_data, load_plan, evaluate, check_adjust_needed, print_report,
+       build_adjustments, save_adjustments
 
 # ── Settings — must match the Optimisation module's calendar ─────────────────
 """Number of shifts per day (one shift, same as optimisation)."""
@@ -47,6 +50,8 @@ const MAX_UTIL = 0.95
 const START_COL = "Start_Time"
 """Column name of the finish time in the optimisation output."""
 const FINISH_COL = "Finish_Time"
+"""File with the adjustment data for the Data module (written only when an adjustment is needed)."""
+const ADJUSTMENT_FILE = "adjustment_data.csv"
 
 # ── Units and fixed values ───────────────────────────────────────────────────
 """Number of milliseconds in one hour."""
@@ -334,6 +339,49 @@ function check_adjust_needed(results)
     (!isempty(reasons), reasons)
 end
 
+# ── 3b. Adjustment data: sent back to the Data module when the answer is YES ──
+"""
+    build_adjustments(results, orders) -> Vector{NamedTuple}
+
+List what must be adjusted when a replan is needed, one row per problem:
+late or unplanned orders, overloaded machines and products that run out of stock.
+"""
+function build_adjustments(results, orders)
+    adjustments = NamedTuple[]
+    for (order_id, hours_late) in sort(collect(results.tardiness))
+        hours_late > 0 && push!(adjustments,
+            (Type = "Order", ID = order_id, Issue = "Late", Value = round(hours_late, digits = 1),
+             Action = "Move to a faster machine or agree a new due date"))
+    end
+    for (order_id, order) in sort(collect(orders), by = first)
+        order.required > 0 && !haskey(results.tardiness, order_id) && push!(adjustments,
+            (Type = "Order", ID = order_id, Issue = "Not planned", Value = order.required,
+             Action = "Add the order to the next planning run"))
+    end
+    for (machine, utilisation) in sort(collect(results.utilisation))
+        utilisation > MAX_UTIL && push!(adjustments,
+            (Type = "Machine", ID = machine, Issue = "Overloaded", Value = round(to_percent(utilisation), digits = 1),
+             Action = "Add shift hours or move jobs to another machine"))
+    end
+    for (product, level) in sort(collect(results.inventory))
+        level.status == STATUS_STOCKOUT && push!(adjustments,
+            (Type = "Product", ID = product, Issue = "Stockout", Value = level.lowest,
+             Action = "Increase stock or production quantity"))
+    end
+    adjustments
+end
+
+"""Save the adjustment data as a CSV file, so the Data module can read it in the next planning run."""
+function save_adjustments(adjustments, path = ADJUSTMENT_FILE)
+    open(path, "w") do io
+        println(io, "Type,ID,Issue,Value,Action")
+        for a in adjustments
+            println(io, join((a.Type, a.ID, a.Issue, a.Value, a.Action), ","))
+        end
+    end
+    path
+end
+
 # ── 4. Report ────────────────────────────────────────────────────────────────
 """Print the evaluation report: KPIs, machine utilisation, projected inventory and the decision."""
 function print_report(results; decision = check_adjust_needed(results))
@@ -355,6 +403,9 @@ function print_report(results; decision = check_adjust_needed(results))
     is_adjust_needed, reasons = decision
     println("\nAdjust plan needed?  ", is_adjust_needed ? "YES → Replan / Adjust" : "NO → Implement & Monitor")
     foreach(reason -> println("  • ", reason), reasons)
+    is_adjust_needed && println("  → Adjustment data for the Data module saved to ", ADJUSTMENT_FILE)
+        below_safety = count(level -> level.status == STATUS_BELOW_SAFETY, values(results.inventory))
+    below_safety > 0 && println("  ⚠ Monitor: ", below_safety, " product(s) below safety stock")
 end
 
 # ── 5. Run everything ────────────────────────────────────────────────────────
@@ -371,6 +422,11 @@ function run_evaluation(cleaned_data, schedule)
     orders, stock, machine_hours, last_op = load_data(cleaned_data)
     results  = evaluate(load_plan(schedule), orders, stock, machine_hours, last_op)
     decision = check_adjust_needed(results)
+    if decision[1]                    # YES → send the adjustment data to the Data module (CSV file)
+        save_adjustments(build_adjustments(results, orders))
+    elseif isfile(ADJUSTMENT_FILE)    # NO  → remove old adjustment data from an earlier run
+        rm(ADJUSTMENT_FILE)
+    end
        open("evaluation_report.txt", "w") do io      # save the report to the file
         redirect_stdout(io) do
             print_report(results; decision = decision)
