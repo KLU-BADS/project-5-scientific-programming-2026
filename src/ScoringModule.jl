@@ -51,15 +51,15 @@ end
 """
     build_eligible_pairs(df::DataFrame) -> Dict
 
-Filters out machines that are under maintenance or cannot handle the required production quantity,
+Filters out machines that are not eligible or are under maintenance,
 then builds a dictionary that maps each order-operation combination to its list of eligible machines.
 
 # Filtering Rules
 A machine is considered eligible only if **all** of the following conditions are true:
 1. `Eligible == "YES"`
 2. `Machine_Status != "MAINTENANCE"`
-3. The required quantity does not exceed the machine's capacity per shift
-4. The total processing time (setup + cycle time × quantity) fits within the available hours of the shift
+
+Jobs larger than one shift are allowed: the Optimisation module spreads them over several days.
 
 # Arguments
 - `df`: Input DataFrame containing order, machine, and routing information.
@@ -85,14 +85,10 @@ function build_eligible_pairs(df::DataFrame)
     end
 
     original_orders = unique(df.Order_ID)
-    qty_col = hasproperty(df, :Required_Production_Qty) ? :Required_Production_Qty : :Order_Quantity
-
     df_clean = filter(
         row ->
             uppercase(strip(string(row.Eligible))) == "YES" &&
-            uppercase(strip(string(row.Machine_Status))) != "MAINTENANCE" &&
-            row[qty_col] <= row.Machine_Capacity_Units_Shift &&
-            (row.Setup_Time_Min + row.Standard_Cycle_Time_Min_Unit * row[qty_col]) <= (row.Available_Hours_Shift * 60.0),
+            uppercase(strip(string(row.Machine_Status))) != "MAINTENANCE",
         df
     )
 
@@ -157,7 +153,7 @@ Scores every feasible (order, machine) candidate pair and returns a richly annot
 
 # Pipeline Overview
 1. Keep only orders that still require production (`Required_Production_Qty > 0`).
-2. Filter machines by eligibility, capacity and available shift time.
+2. Filter machines by eligibility and machine status (every order-operation must keep a machine).
 3. Compute a risk-adjusted processing time via Monte Carlo simulation (blend of P50 and P90).
 4. Normalize three performance metrics **locally** within each operation step:
    - Time (lower is better)
@@ -206,11 +202,15 @@ function score_candidates(df::DataFrame, α::Real = 0.7, seed::Int = 42)
     df_scored = filter(
         row ->
             uppercase(strip(string(row.Eligible))) == "YES" &&
-            uppercase(strip(string(row.Machine_Status))) != "MAINTENANCE" &&
-            row[qty_col] <= row.Machine_Capacity_Units_Shift &&
-            (row.Setup_Time_Min + row.Standard_Cycle_Time_Min_Unit * row[qty_col]) <= (row.Available_Hours_Shift * 60.0),
+            uppercase(strip(string(row.Machine_Status))) != "MAINTENANCE",
         df
     )
+
+    # Every order-operation must keep at least one machine, otherwise it vanishes from the plan
+    needed  = unique(df[!, ROUTE_COLS])
+    covered = unique(df_scored[!, ROUTE_COLS])
+    lost    = antijoin(needed, covered, on = ROUTE_COLS)
+    isempty(lost) || error("No eligible machine for $(nrow(lost)) order-operation(s): $(first(lost, 5))")
 
     # ------------------------------------------------------------------
     # 3. Nominal processing time
